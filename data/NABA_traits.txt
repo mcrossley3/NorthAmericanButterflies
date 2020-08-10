@@ -1,0 +1,653 @@
+Genus	Species	Family	Subfamily	Native	Habitat	NCGR	OverwinteringStage	MinSouthBroodsPerYear	MaxSouthBroodsPerYear	MinNorthBroodsPerYear	MaxNorthBroodsPerYear	Clutches	LarvalColor	Hair	LarvaSequester	SouthFlightTime	NorthFlightTime	AdultFeeding	MinWingSpan	MaxWingSpan	AdultSize	AdultColor
+Achalarus	casica	Hesperiidae	Pyrginae	yes	natural 	G4							cryptic	yes				nectar	38	51	44.5	cryptic
+Achalarus	jalapus	Hesperiidae	Pyrginae	yes	Natural	G4							cryptic	no			July, Sept-Oct	nectar	42	50	46.0	cryptic
+Achalarus	lyciades	Hesperiidae	Pyrginae	yes	both	G5	larva	2	2	1	1	singly	aposematic	yes		June-Aug	April-Sept	nectar	45	49	47.0	aposematic
+Achalarus	tehuacana	Hesperiidae	Pyrginae	yes															41	43	42.0	cryptic
+Achalarus	toxeus	Hesperiidae	Pyrginae	yes	natural	G5						singly	cryptic	no		Dec-Jan	Feb-Nov	nectar	42	50	46.0	cryptic
+Achlyodes	thraso	Hesperiidae	Pyrginae	yes	natural	G4						singly	cryptic	no					35	45	40.0	cryptic
+Adelpha	basiloides	Nymphalidae	Limenitidinae	yes	natural	G4							cryptic	no		Dec-Feb	Mar-Nov	dung, rotting fruit	57	67	62.0	aposematic
+Adelpha	bredowii	Nymphalidae	Limenitidinae	yes	natural	G5	larva						cryptic	yes		Nov-Feb	Mar-Oct	nectar, mud	63	102	82.5	aposematic
+Adelpha	fessonia	Nymphalidae	Limenitidinae	yes	natural	G4						singly				Nov-Feb	Mar-Oct	nectar, rotting fruit	56	70	63.0	aposematic
+Adopaeoides	prittwitzi	Hesperiidae	Hesperiinae	yes	natural	G3							aposematic	no		Nov-Apr	May-Oct	nectar	22	25	23.5	aposematic
+Agathymus	aryxna	Hesperiidae	Megathyminae	yes	natural	G4	larva					singly	aposematic	no		Dec-Jul	Aug-Nov	mud	50	61	55.5	cryptic
+Agraulis	vanillae	Nymphalidae	Heliconiinae	yes	natural	G5	adult						aposematic	yes		December	Jan-Nov	nectar	63	95	79.0	aposematic
+Agriades	cassiope	Lycaenidae	Polyommatinae																			cryptic
+Agriades	glandon	Lycaenidae	Polyommatinae																17	23	20.0	aposematic
+Aguna	asander	Hesperiidae	Pyrginae	yes	natural	G5							aposematic	no		Dec-Jan	Feb-Nov	nectar	38	56	47.0	cryptic
+Aguna	metophis	Hesperiidae	Pyrginae	yes	natural	G5							aposematic	no		Dec-Jul	Aug-Nov	nectar	37	48	42.5	cryptic
+Amblyscirtes	aenus	Hesperiidae	Hesperiinae	yes	natural	G4	larva	2	2	1	1		cryptic	yes		August-March	April-July	nectar	25	32	28.5	cryptic
+Amblyscirtes	aesculapius	Hesperiidae	Hesperiinae	yes	natural	G4					2		aposematic	no		October-Feb	March-September	nectar	30	38	34.0	cryptic
+Amblyscirtes	alternata	Hesperiidae	Hesperiinae	yes	natural 	G3							aposematic	no		November-Mar	April-October	nectar	22	25	23.5	cryptic
+Amblyscirtes	belli	Hesperiidae	Hesperiinae	yes	anthropogenic	G4	chrysalis				3		aposematic	no		October-March	April-September	nectar	30	32	31.0	cryptic
+Amblyscirtes	carolina	Hesperiidae	Hesperiinae	yes	natural 	G4					3		cryptic	no		October-March	April-September	nectar	29	37	33.0	cryptic
+Amblyscirtes	cassus	Hesperiidae	Hesperiinae	yes	natural	G3					1		aposematic	no		October-May	June-September	nectar	25	32	28.5	cryptic
+Amblyscirtes	celia	Hesperiidae	Hesperiinae	yes	natural	G4	chrysalis						aposematic	no		October-March	May-September	nectar	22	27	24.5	cryptic
+Amblyscirtes	elissa	Hesperiidae	Hesperiinae	yes	natural	G3					1		aposematic	no		September-May	June-August	nectar	22	29	25.5	cryptic
+Amblyscirtes	eos	Hesperiidae	Hesperiinae																22	27	24.5	cryptic
+Amblyscirtes	exoteria	Hesperiidae	Hesperiinae	yes	natural	G3					1		aposematic	no		Oct-May	June-Sept	nectar	32	38	35.0	cryptic
+Amblyscirtes	fimbriata	Hesperiidae	Hesperiinae	yes	anthropogenic	G3							cryptic	no		August-March	April-July	nectar	29	32	30.5	cryptic
+Amblyscirtes	hegon	Hesperiidae	Hesperiinae	yes	natural	G5					1		aposematic	no		September-June	July-August	nectar	25	31	28.0	cryptic
+Amblyscirtes	nereus	Hesperiidae	Hesperiinae	yes	natural	G3					1		cryptic	no		Sept-May	June-August	nectar	25	29	27.0	cryptic
+Amblyscirtes	nysa	Hesperiidae	Hesperiinae	yes	anthropogenic	G4			3				aposematic	no		November-Feburary	March-October	nectar	19	30	24.5	cryptic
+Amblyscirtes	oslari	Hesperiidae	Hesperiinae	yes	natural	G4	larva	1	2	1	1		aposematic	no		April-August	May-July	nectar	25	35	30.0	cryptic
+Amblyscirtes	phylace	Hesperiidae	Hesperiinae	yes	natural	G4		1	1	1	1		aposematic	no		September-May	June-August	nectar	22	29	25.5	cryptic
+Amblyscirtes	reversa	Hesperiidae	Hesperiinae	yes	natural	G3				2	3		aposematic	no		Septemeber-March	April-August	nectar	29	35	32.0	cryptic
+Amblyscirtes	texanae	Hesperiidae	Hesperiinae	yes	natural	G3							aposematic	no		April-September	Novermber-March	nectar	25	32	28.5	cryptic
+Amblyscirtes	tolteca	Hesperiidae	Hesperiinae																25	32	28.5	cryptic
+Amblyscirtes	vialis	Hesperiidae	Hesperiinae	yes	natural	G5	larva	1	1	1	1	singly	cryptic	no		September-February	March-August	nectar	22	32	27.0	cryptic
+Anaea	aidea	Nymphalidae	Charaxinae	yes	natural	G5						singly	aposematic	yes		September-April	May-August	sap, dung, and rotting fruit	57	78	67.5	aposematic
+Anaea	andria	Nymphalidae	Charaxinae	yes	anthropogenic	G4	adult					singly	aposematic	yes		August-May	July-August	sap, dung, and rotting fruit	60	82	71.0	aposematic
+Anaea	floridalis	Nymphalidae	Charaxinae	yes	natural	G1	adult					singly	aposematic	yes		October-April	May-September	rotting fruit, dung	76	90	83.0	aposematic
+Anaea	pithyusa	Nymphalidae	Charaxinae	yes	natural	G5	adult					singly	cryptic	yes		November-March	May-September	rotting fruit, dung	57	76	66.5	cryptic
+Anartia	fatima	Nymphalidae	Nymphalinae	yes	natural	G5							cryptic	yes				nectar	60	70	65.0	cryptic
+Anartia	jatrophae	Nymphalidae	Nymphalinae	yes	natural	G5						singly	cryptic	yes				nectar	51	70	60.5	aposematic
+Anatrytone	logan	Hesperiidae	Hesperiinae		natural	G5	chrysalis	1		1	1	singly	aposematic	no		September-April	May-August	nectar	25	43	34.0	aposematic
+Anatrytone	mazai	Hesperiidae	Hesperiinae	yes									cryptic	no		March-December	April-October		28	30	29.0	aposematic
+Ancyloxypha	arene	Hesperiidae	Hesperiinae	yes	natural	G4	larva											nectar	19	27	23.0	aposematic
+Ancyloxypha	numitor	Hesperiidae	Hesperiinae	yes	natural	G5	chrysalis	3	4	3	3	singly	cryptic	no		May-Oct	Feb-Dec	nectar	22	29	25.5	cryptic
+Anteos	clorinde	Pieridae	Coliadinae	yes	natural	G5						singly	aposematic	no		January-July	August-December	nectar	70	90	80.0	aposematic
+Anteos	maerula	Pieridae	Coliadinae	yes	natural	G5							aposematic	no			August-December	nectar	82	117	99.5	aposematic
+Anthocharis	cethura	Pieridae	Pierinae	yes	natural	G5	chrysalis						cryptic	no		Feb-April	May-Jan	nectar	25	40	32.5	aposematic
+Anthocharis	lanceolata	Pieridae	Pierinae	yes	natural	G3						singly	cryptic	no		March-June	July-Feb	nectar	38	50	44.0	cryptic
+Anthocharis	midea	Pieridae	Pierinae	yes	natural	G5	chrysalis					singly	aposematic	no		March-June	July-Feb	nectar	35	45	40.0	aposematic
+Anthocharis	sara	Pieridae	Pierinae	yes	natural	G5	chrysalis					singly	aposematic	no		June-Jan	Feb-June	nectar	27	40	33.5	aposematic
+Apodemia	hepburni	Riodinidae	Riodininae	yes	natural	G4							aposematic	no		March-November	July	nectar	20	30	25.0	aposematic
+Apodemia	mormo	Riodinidae	Riodininae	yes	natural	G5						clutches	cryptic	no		March-October	July-September	nectar	22	33	27.5	aposematic
+Apodemia	nais	Riodinidae	Riodininae	yes	natural	G5	chrysalis				1	singly	cryptic	yes		August-April	May-July	nectar	32	35	33.5	aposematic
+Apodemia	palmeri	Riodinidae	Riodininae	yes	natural	G5	larva			2	2	singly	aposematic	yes		April-November	May-September	nectar	20	30	25.0	cryptic
+Apodemia	walkeri	Riodinidae	Riodininae	yes	natural	G4							aposematic	no		June-October		nectar	20	25	22.5	cryptic
+Appias	drusilla	Pieridae	Pierinae	yes	natural	G5						singly	aposematic	no		October-April	May-September	nectar	53	77	65.0	cryptic
+Arawacus	jada	Lycaenidae	Theclinae	yes	natural	GU							aposematic	no				nectar	30	30	30.0	cryptic
+Asbolis	capucinus	Hesperiidae	Hesperiinae	yes	natural	G4					4		aposematic	no				nectar	48	60	54.0	cryptic
+Ascia	monuste	Pieridae	Pierinae	yes	natural	G5							aposematic	no				nectar	63	86	74.5	cryptic
+Asterocampa	celtis	Nymphalidae	Apaturinae																35	63	49.0	aposematic
+Asterocampa	clyton	Nymphalidae	Apaturinae	yes	natural	G5	larva	2	2	1	1	clutches	aposematic	yes		March-November	June-August	sap, rotting fruit, dung	42	70	56.0	cryptic
+Asterocampa	leilia	Nymphalidae	Apaturinae	yes	natural	G5	chrysalis						aposematic	no			April-November	nectar, dung, sap	38	76	57.0	aposematic
+Astraptes	fulgerator	Hesperiidae	Pyrginae	yes	natural	G5							aposematic	yes				nectar, dung	48	61	54.5	aposematic
+Astraptes	gilberti	Hesperiidae	Pyrginae	yes	natural	G5							aposematic	no				nectar, dung	51	64	57.5	aposematic
+Atalopedes	campestris	Hesperiidae	Hesperiinae	yes	natural	G5		4	5	3	4	singly	cryptic	no		March-December	May-November	nectar	32	42	37.0	cryptic
+Atlides	halesus	Lycaenidae	Theclinae	yes	natural	G5	chrysalis	3	3				aposematic	yes		March-December	May-November	nectar	32	51	41.5	aposematic
+Atlides	rustan	Lycaenidae	Theclinae	yes															53	53	53.0	aposematic
+Atrytone	arogos	Hesperiidae	Hesperiinae	yes	natural	G3	chrysalis	2	2	1	1	singly	aposematic	no		April-Sept	June-July	nectar	29	37	33.0	cryptic
+Atrytonopsis	cestus	Hesperiidae	Hesperiinae	yes	natural	G2	larva						aposematic	no		August-October	April-May	nectar	35	39	37.0	cryptic
+Atrytonopsis	edwardsii	Hesperiidae	Hesperiinae	yes	natural	G4	egg			2			cryptic	no			March-November	nectar	32	38	35.0	cryptic
+Atrytonopsis	hianna	Hesperiidae	Hesperiinae	yes	natural	G4	chrysalis	2	2	1	1		aposematic	yes		March-October	May-June	nectar	32	43	37.5	cryptic
+Atrytonopsis	lunus	Hesperiidae	Hesperiinae	yes	natural	G3	chrysalis			1	1		cryptic	no		September-May	June-August	nectar	42	51	46.5	cryptic
+Atrytonopsis	pittacus	Hesperiidae	Hesperiinae	yes	natural	G3	adult	1	1	1	1		aposematic	no		Mar-Oct	Nov-Feb	nectar	32	38	35.0	cryptic
+Atrytonopsis	python	Hesperiidae	Hesperiinae	yes	natural	G4	larva			1			aposematic	yes		April-July		nectar	35	42	38.5	cryptic
+Atrytonopsis	vierecki	Hesperiidae	Hesperiinae	yes	natural	G4					1		aposematic	no		April-June	July-March	nectar	32	42	37.0	cryptic
+Autochton	bipunctatus	Hesperiidae	Pyrginae																33	37	35.0	aposematic
+Autochton	cellus	Hesperiidae	Pyrginae	yes	natural	G4	chrysalis	1	1	2	2	clutches	aposematic	no		September-June	May-August	nectar	35	51	43.0	cryptic
+Autochton	cincta	Hesperiidae	Pyrginae	yes	natural	G5							aposematic	no		March-Sept	Oct-Feb	nectar	30	44	37.0	cryptic
+Autochton	neis	Hesperiidae	Pyrginae	yes															35	38	36.5	aposematic
+Autochton	siermadror	Hesperiidae	Pyrginae																39	40	39.5	aposematic
+Battus	philenor	Papilionidae	Papilioninae	yes	natural	G5	chrysalis						aposematic	yes		March-Novermber	December-Feb	nectar	70	130	100.0	aposematic
+Battus	polydamas	Papilionidae	Papilioninae	yes	anthropogenic	G5	chrysalis						cryptic	yes		Dec-Mar	April-Nov	nectar	90	120	105.0	cryptic
+Biblis	hyperia	Nymphalidae	Biblidinae	yes	natural	G4						singly	cryptic	yes		Nov-Mar	July-Nov	rotting fruit	51	76	63.5	aposematic
+Bolla	clytius	Hesperiidae	Pyrginae																22	29	25.5	cryptic
+Boloria	astarte	Nymphalidae	Heliconiinae	yes	natural	G5	larva						cryptic	yes		Sep-May	June-Aug	nectar	42	51	46.5	aposematic
+Boloria	bellona	Nymphalidae	Heliconiinae	yes	anthropogenic	G5	larva	2	3				cryptic	yes		November-Mar	April-October	nectar	35	51	43.0	cryptic
+Boloria	chariclea	Nymphalidae	Heliconiinae	yes	natural	G5	larva				1	singly	cryptic	yes		Sep-May	June-Aug	nectar	31	39	35.0	aposematic
+Boloria	epithore	Nymphalidae	Heliconiinae	yes	natural	G5	larva						aposematic	yes		Sep-April	May-Aug	nectar	35	45	40.0	cryptic
+Boloria	eunomia	Nymphalidae	Heliconiinae	yes	natural	G5	larva				1	clutches	cryptic	yes		Sep-May	June-Aug	nectar	32	45	38.5	aposematic
+Boloria	freija	Nymphalidae	Heliconiinae	yes	natural	G5	chrysalis				1		cryptic	yes		August-April	May-July	nectar	35	41	38.0	cryptic
+Boloria	frigga	Nymphalidae	Heliconiinae	yes	natural	G5	larva				1		cryptic	no		September-April	May-August	nectar	38	51	44.5	cryptic
+Boloria	improba	Nymphalidae	Heliconiinae	yes	natural	G5					1	singly	aposematic	yes		September-April	June-Aug	nectar	30	35	32.5	cryptic
+Boloria	kriemhild	Nymphalidae	Heliconiinae	yes	natural	G3	larva				1		aposematic	yes		september-may	June-Aug	nectar	35	45	40.0	cryptic
+Boloria	montinus	Nymphalidae	Heliconiinae	yes															31	39	35.0	aposematic
+Boloria	napaea	Nymphalidae	Heliconiinae	yes	natural	G5	larva				1	singly	cryptic	yes		Sep-May	June-Aug	nectar	35	48	41.5	aposematic
+Boloria	polaris	Nymphalidae	Heliconiinae	yes															33	38	35.5	aposematic
+Boloria	selene	Nymphalidae	Heliconiinae	yes	natural	G5	larva					singly	cryptic	yes		May-Sept	June-July	nectar	35	54	44.5	aposematic
+Brephidium	exile	Lycaenidae	Polyommatinae	yes	natural	G5	chrysalis						aposematic	no		Oct-June	July-Sep	nectar	12	20	16.0	cryptic
+Brephidium	isophthalma	Lycaenidae	Polyommatinae	yes	natural	G5							aposematic	no		Sep-June	May-August	nectar	20	22	21.0	cryptic
+Cabares	potrillo	Hesperiidae	Pyrginae	yes	natural	G4					3		cryptic	no				nectar	29	43	36.0	cryptic
+Calephelis	arizonensis	Riodinidae	Riodininae	yes															20	24	22.0	aposematic
+Calephelis	borealis	Riodinidae	Riodininae	yes	natural	G3	larva				1		cryptic	yes		August-May	June-july	nectar	29	32	30.5	cryptic
+Calephelis	mutica	Riodinidae	Riodininae	yes	natural	G4	larva					singly	cryptic	yes		May-Sept	June-Aug	nectar	24	30	27.0	cryptic
+Calephelis	nemesis	Riodinidae	Riodininae	yes	natural	G5	larva					singly	cryptic	yes		Nov-April	May-Oct	nectar	20	25	22.5	cryptic
+Calephelis	perditalis	Riodinidae	Riodininae	yes	natural	G5	larva					singly	cryptic	yes		Dec-Feb	Mar-Nov	nectar	18	24	21.0	aposematic
+Calephelis	rawsoni	Riodinidae	Riodininae	yes	natural	G3	larva					singly	cryptic	yes		Dec-May	June-Nov	nectar	20	29	24.5	cryptic
+Calephelis	virginiensis	Riodinidae	Riodininae	yes	natural	G4	larva			3	5	singly	cryptic	yes		Nov-Feb	Mar-Oct	nectar	13	25	19.0	cryptic
+Calephelis	wrighti	Riodinidae	Riodininae	yes	natural	G4	larva					singly	cryptic	no		Nov-Jan	Feb-Oct	nectar	25	30	27.5	cryptic
+Callophrys	augustinus	Lycaenidae	Theclinae	yes	natural	G5	chrysalis					singly	aposematic	yes		March-April	May-July	nectar	22	29	25.5	cryptic
+Callophrys	dumetorum	Lycaenidae	Theclinae	yes	natural	G5	chrysalis						aposematic	yes		June-Feb	March-April	nectar	25	32	28.5	aposematic
+Callophrys	eryphon	Lycaenidae	Theclinae					1	1	1	1								25	35	30.0	aposematic
+Callophrys	fotis	Lycaenidae	Theclinae	yes	natural	G3	chrysalis					singly	aposematic	no		July-Feb	March-June		19	28	23.5	cryptic
+Callophrys	gryneus	Lycaenidae	Theclinae	yes	anthropogenic	G5	chrysalis	1	1	1	2	singly	aposematic	no		 August-feb	Mar-July	nectar	26	32	29.0	aposematic
+Callophrys	henrici	Lycaenidae	Theclinae	yes	natural	G5	chrysalis						aposematic	no		June-Jan	Feb-May	nectar	25	32	28.5	cryptic
+Callophrys	hesseli	Lycaenidae	Theclinae	yes	natural	G3	chrysalis					singly	aposematic	no		April-July	August-Mar	nectar	25	28	26.5	aposematic
+Callophrys	irus	Lycaenidae	Theclinae	yes	natural	G2	chrysalis					singly	aposematic	no		March-April	May-June	nectar	25	32	28.5	cryptic
+Callophrys	johnsoni	Lycaenidae	Theclinae	yes	natural	G3	chrysalis						aposematic	yes		Aug-Apr	May-July	nectar	32	35	33.5	cryptic
+Callophrys	mossii	Lycaenidae	Theclinae	yes	natural	G4	chrysalis					singly	cryptic	no		July-Feb	Mar-June		22	28	25.0	cryptic
+Callophrys	niphon	Lycaenidae	Theclinae					1	1	1	1								22	27	24.5	aposematic
+Callophrys	polios	Lycaenidae	Theclinae	yes	natural	G5	chrysalis					singly	aposematic	yes		July-Mar	April-June	nectar	22	29	25.5	cryptic
+Callophrys	sheridanii	Lycaenidae	Theclinae	yes	natural	G5	chrysalis					singly	aposematic	yes		June-Mar	April-May	nectar	22	29	25.5	aposematic
+Callophrys	spinetorum	Lycaenidae	Theclinae	yes	natural	G5	chrysalis					singly	cryptic	yes		Sep-April	May-August	nectar	25	32	28.5	cryptic
+Callophrys	xami	Lycaenidae	Theclinae	yes	natural	G4						singly	aposematic	no		Jan-Mar	April-Dec	nectar	20	32	26.0	cryptic
+Calpodes	ethlius	Hesperiidae	Hesperiinae	yes	natural	G5		2	2	2	2		cryptic	no		April-December	July-Nov	nectar	45	61	53.0	cryptic
+Calycopis	cecrops	Lycaenidae	Theclinae	yes	natural	G5	chrysalis				2		aposematic	no		Nov-Mar	April-Oct	nectar	22	32	27.0	cryptic
+Calycopis	isobeon	Lycaenidae	Theclinae	yes	natural	G5							cryptic	yes		October-December	January-September	nectar	22	32	27.0	aposematic
+Caria	ino	Riodinidae	Riodininae																20	25	22.5	aposematic
+Carrhenes	canescens	Hesperiidae	Pyrginae	yes	natural	G4							aposematic	yes		October-December	February-May	nectar	25	33	29.0	cryptic
+Carterocephalus	palaemon	Hesperiidae	Hesperiinae	yes	natural	G5	larva			1	1		aposematic	no		August-April	May-July	nectar	25	32	28.5	cryptic
+Catasticta	nimbice	Pieridae	Pierinae	yes	natural	G4							aposematic	no				nectar	45	57	51.0	cryptic
+Celastrina	ladon	Lycaenidae	Polyommatinae	yes	natural	G4	chrysalis						cryptic	no		January-October	May-August	nectar	22	35	28.5	cryptic
+Celastrina	neglectamajor	Lycaenidae	Polyommatinae	yes	natural	G4							cryptic	no		July-April	May-June	nectar	32	39	35.5	cryptic
+Celastrina	nigra	Lycaenidae	Polyommatinae	yes	natural	G4	chrysalis			1	1		aposematic	no		June-Mar	April-May	nectar	22	32	27.0	cryptic
+Celotes	nessus	Hesperiidae	Pyrginae	yes	natural	G5	larva						aposematic	no		Dec-Feb	Mar-Nov	nectar	22	30	26.0	cryptic
+Cercyonis	meadii	Nymphalidae	Satyrinae	yes	natural	G5	larva				1		aposematic	no		October-June	July-Nov	nectar	35	45	40.0	aposematic
+Cercyonis	oetus	Nymphalidae	Satyrinae	yes	natural	G5	larva				1		aposematic	no		Sep-May	June-August	nectar	32	45	38.5	cryptic
+Cercyonis	pegala	Nymphalidae	Satyrinae	yes	natural	G5	larva				1		aposematic	yes		Sep-May	June-August	nectar	35	45	40.0	cryptic
+Cercyonis	sthenele	Nymphalidae	Satyrinae	yes	natural	G5							aposematic	no				nectar	39	45	42.0	cryptic
+Chioides	catillus	Hesperiidae	Pyrginae	yes	natural	G5							aposematic	no				nectar	39	54	46.5	cryptic
+Chioides	zilpa	Hesperiidae	Pyrginae	yes	natural	G5							aposematic	no		Dec-Feb	Mar-Nov	nectar	39	59	49.0	cryptic
+Chiomara	asychis	Hesperiidae	Pyrginae	yes	natural	G5				3	4		aposematic	no		Dec-Feb	Mar-Nov	nectar	29	38	33.5	cryptic
+Chlorostrymon	maesites	Lycaenidae	Theclinae	yes	natural	G4	larva			3	4		aposematic	yes		Dec-july	August-November	nectar	22	25	23.5	aposematic
+Chlorostrymon	simaethis	Lycaenidae	Theclinae	yes	natural	G5	larva						aposematic	no		Dec-July	August-November	nectar	22	32	27.0	aposematic
+Chlosyne	acastus	Nymphalidae	Nymphalinae	yes	natural	G4	larva			2	2		cryptic	yes		Sep-May	June-August	nectar	39	51	45.0	aposematic
+Chlosyne	californica	Nymphalidae	Nymphalinae	yes	natural	G5	larva						cryptic	yes		December-Feb	Mar-Nov	nectar	32	51	41.5	aposematic
+Chlosyne	cyneas	Nymphalidae	Nymphalinae	yes	natural	G5							aposematic	yes		October-March	April-September	nectar	35	42	38.5	cryptic
+Chlosyne	definita	Nymphalidae	Nymphalinae	yes		G4							cryptic	yes		Nov-Mar	April-Oct	nectar	30	38	34.0	aposematic
+Chlosyne	ehrenbergii	Nymphalidae	Nymphalinae	yes								clutches	aposematic	yes		Nov-Mar	April-Oct	nectar	32	50	41.0	aposematic
+Chlosyne	fulvia	Nymphalidae	Nymphalinae	yes	natural	G4	larva				3		cryptic	yes					32	50	41.0	aposematic
+Chlosyne	gabbii	Nymphalidae	Nymphalinae	yes	natural	G4	larva				1		cryptic	yes		Aug-April	May-July	nectar	32	45	38.5	cryptic
+Chlosyne	gorgone	Nymphalidae	Nymphalinae	yes	anthropogenic	G5	larva	1	3	1	2		cryptic	yes		May-September	July-August	nectar	32	45	38.5	aposematic
+Chlosyne	harrisii	Nymphalidae	Nymphalinae	yes	natural	G5	larva			1	1	clutches	aposematic	yes		Aug-May	June-july	nectar	36	51	43.5	aposematic
+Chlosyne	hoffmanni	Nymphalidae	Nymphalinae	yes	natural	G4	larva					clutches	cryptic	yes		Aug-May	June-July	nectar	35	45	40.0	aposematic
+Chlosyne	janais	Nymphalidae	Nymphalinae	yes	natural	G5						clutches	aposematic	yes		Dec-May	July-November	nectar	48	67	57.5	aposematic
+Chlosyne	lacinia	Nymphalidae	Nymphalinae	yes	natural	G5	larva					clutches	cryptic	no		Nov-Feb	Mar-October	nectar	35	51	43.0	cryptic
+Chlosyne	leanira	Nymphalidae	Nymphalinae	yes	natural	G4	larva					clutches	aposematic	yes		Aug-Mar	April-Jul	nectar	35	45	40.0	aposematic
+Chlosyne	nycteis	Nymphalidae	Nymphalinae	yes	natural	G5	larva	3	4	1	2	clutches	cryptic	yes		October-May	June-September	nectar	35	51	43.0	aposematic
+Chlosyne	palla	Nymphalidae	Nymphalinae	yes	natural	G5	larva					clutches	cryptic	yes		August-Mar	April-july	nectar	35	48	41.5	aposematic
+Chlosyne	rosita	Nymphalidae	Nymphalinae	yes	natural	G4							aposematic	yes				nectar	37	50	43.5	aposematic
+Chlosyne	theona	Nymphalidae	Nymphalinae	yes	natural	G5	larva					clutches	cryptic	yes		Nov-Mar	April-October	nectar	32	44	38.0	aposematic
+Chlosyne	whitneyi	Nymphalidae	Nymphalinae	yes	natural	G4	larva					clutches	cryptic	yes		Sep-June	Jul-August	nectar	32	41	36.5	aposematic
+Codatractus	arizonensis	Hesperiidae	Pyrginae	yes	natural	G5							aposematic	no		Nov-Mar	April-October	nectar	45	51	48.0	cryptic
+Codatractus	valeriana	Hesperiidae	Pyrginae	yes	both	G4	larva	1					cryptic	no		July - August		nectar	39	40	39.5	cryptic
+Coenonympha	haydenii	Nymphalidae	Satyrinae	yes	both	G5	larva	1				singly	cryptic	yes		June - early August		nectar	35	38	36.5	aposematic
+Coenonympha	tullia	Nymphalidae	Satyrinae	yes	natural	G5	larva	1	2			singly	cryptic	yes		March - October		nectar	34	38	36.0	cryptic
+Cogia	caicus	Hesperiidae	Pyrginae	yes	natural	G4	larva	2	3							March - August		nectar	42	45	43.5	cryptic
+Cogia	calchas	Hesperiidae	Pyrginae	yes	both	G5		3				singly	cryptic	no		throughout the year in Mexico and Central America	March - November	nectar	30	45	37.5	cryptic
+Cogia	hippalus	Hesperiidae	Pyrginae	yes	both	G5		1	2				aposematic	yes		October in Mexico	April - August in Texas and Arizona	nectar	35	48	41.5	cryptic
+Cogia	outis	Hesperiidae	Pyrginae	yes	anthropogenic	G4	larva	1	4			singly	aposematic	no		March - October		nectar	30	43	36.5	cryptic
+Colias	alexandra	Pieridae	Coliadinae	yes	both	G5	larva	1				singly	aposematic	yes		May - August		nectar	42	57	49.5	aposematic
+Colias	behrii	Pieridae	Coliadinae	yes	natural	G3	larva	1					aposematic	no		July - August		nectar	35	42	38.5	cryptic
+Colias	canadensis	Pieridae	Coliadinae	yes		G5										May to early August in Alberta	late May until mid - July in the north		32	47	39.5	aposematic
+Colias	cesonia	Pieridae	Coliadinae																54	76	65.0	aposematic
+Colias	christina	Pieridae	Coliadinae	yes	both	G5	larva	1				singly	aposematic	yes		May - September		nectar	45	63	54.0	aposematic
+Colias	eurydice	Pieridae	Coliadinae																22	31	26.5	aposematic
+Colias	eurytheme	Pieridae	Coliadinae	yes	both	G5	chrysalis	4	5	2	3	singly	cryptic	yes		March - November	June - October	nectar	35	70	52.5	aposematic
+Colias	gigantea	Pieridae	Coliadinae	yes	both	G4	larva	1				singly	aposematic	yes		June - July		nectar	51	70	60.5	aposematic
+Colias	hecla	Pieridae	Coliadinae	yes	natural								aposematic	yes					36	46	41.0	aposematic
+Colias	interior	Pieridae	Coliadinae	yes	both	G5	larva	1				singly	aposematic	yes		June - August		nectar	39	66	52.5	aposematic
+Colias	meadii	Pieridae	Coliadinae	yes	both	G4	larva	1				singly	cryptic	yes		July - August		nectar	38	51	44.5	cryptic
+Colias	nastes	Pieridae	Coliadinae	yes	both	G5	larva	1					aposematic	yes		late June - early August		nectar	31	45	38.0	aposematic
+Colias	occidentalis	Pieridae	Coliadinae	yes	both	G4	larva	1	2			singly	cryptic	yes		May - August		nectar	45	63	54.0	aposematic
+Colias	palaeno	Pieridae	Coliadinae	yes									cryptic	yes				nectar	46	50	48.0	aposematic
+Colias	pelidne	Pieridae	Coliadinae	yes	both	G5	larva	1				singly	cryptic	yes		late June - July		nectar	32	44	38.0	aposematic
+Colias	philodice	Pieridae	Coliadinae	yes	both	G5	larva	4	5	3		singly	cryptic	yes		March - November	May - October	nectar	38	70	54.0	aposematic
+Colias	scudderii	Pieridae	Coliadinae	yes	natural	G4	larva	1				singly	cryptic	yes		late June - August		nectar	38	51	44.5	aposematic
+Copaeodes	aurantiacus	Hesperiidae	Hesperiinae	yes	both	G5		2	3	1		singly	cryptic	yes		February - December	April - October	nectar	19	29	24.0	aposematic
+Copaeodes	minimus	Hesperiidae	Hesperiinae	yes	both	G5		2				singly	cryptic	yes		March - October in Louisiana; all year in Florida		nectar	16	22	19.0	aposematic
+Cupido	amyntula	Lycaenidae	Polyommatinae	yes	both	G5	larva	1	3			singly	aposematic	yes		March - July		nectar	22	29	25.5	cryptic
+Cupido	comyntas	Lycaenidae	Polyommatinae	yes	both	G5	larva	1	4	3		singly	aposematic	yes		February - November	April - November	nectar	22	29	25.5	aposematic
+Cyanophrys	herodotus	Lycaenidae	Theclinae	yes	both	G5		1				singly	aposematic	yes		throughout the year in Central America and Mexico	late May - late October in South Texas	nectar	22	29	25.5	aposematic
+Cyanophrys	longula	Lycaenidae	Theclinae	yes	natural								cryptic	yes		March-May and August-December		nectar	21	30	25.5	aposematic
+Cyclargus	ammon	Lycaenidae	Polyommatinae	yes	both	G4	adult	1				singly	cryptic	yes		throughout the year in Flordia		nectar	22	30	26.0	aposematic
+Cyclargus	thomasi	Lycaenidae	Polyommatinae	yes	both	G4	adult	1				singly	cryptic	yes		throughout the year in Flordia		nectar	22	30	26.0	aposematic
+Cyllopsis	gemma	Nymphalidae	Satyrinae	yes	both	G5	larva	1	3			singly	cryptic	yes		through out the year in South Texas, April - September elsewhere		rotting fruit	35	43	39.0	cryptic
+Cyllopsis	pertepida	Nymphalidae	Satyrinae	yes	both	G5	larva	2	3	1		singly				May - October	June - August		38	45	41.5	cryptic
+Cyllopsis	pyracmon	Nymphalidae	Satyrinae	yes	natural	G4		2					cryptic	yes		May - June, August - September		nectar	38	45	41.5	cryptic
+Cymaenes	odilia	Hesperiidae	Hesperiinae																27	27	27.0	cryptic
+Cymaenes	trebius	Hesperiidae	Hesperiinae	yes	both	G5		1		1			cryptic	yes		April - January in Mexico and Central America	June - November in South Texas	nectar	21	31	26.0	cryptic
+Cymaenes	tripunctus	Hesperiidae	Hesperiinae	yes	both	G5		2	3			singly	cryptic	yes		March - October		nectar	29	35	32.0	cryptic
+Danaus	eresimus	Nymphalidae	Danainae	yes	both	G5		1				singly	aposematic	yes		all year in southern Flordia, August - December in South Texas		nectar	70	95	82.5	aposematic
+Danaus	gilippus	Nymphalidae	Danainae	yes	both	G5	adult	1				singly	aposematic	yes	yes	all year in Flordia and South Texas	July - August 	nectar	67	98	82.5	aposematic
+Danaus	plexippus	Nymphalidae	Danainae	yes	both	G5	adult	4	6	1	3	singly	aposematic	yes	yes	may breed all year in Flordia, South Texas, and southeastern California		nectar	86	124	105.0	aposematic
+Decinea	percosius	Hesperiidae	Hesperiinae	yes	both	G4	larva	1				singly		yes		March - November		nectar	22	35	28.5	cryptic
+Dione	juno	Nymphalidae	Heliconiinae	yes	natural									yes				nectar, mud	63.5	76	69.8	aposematic
+Dione	moneta	Nymphalidae	Heliconiinae	yes	both	G5		1	3	1		both	aposematic	yes		throughout the year in the tropics	April - December in Texas	nectar	76	83	79.5	aposematic
+Doxocopa	laure	Nymphalidae	Heliconiinae	yes	both	G5		1		1		singly	cryptic	yes		all year in the tropics	July - December in South Texas	rotting fruit, dung, sap, carrion	70	82	76.0	aposematic
+Doxocopa	pavon	Nymphalidae	Apaturinae	yes	both	G5		1	3							May - September		nectar, rotting fruit, and bird droppings	56	69	62.5	aposematic
+Dryadula	phaetusa	Nymphalidae	Heliconiinae	yes	both	G5		1		1		singly	aposematic	yes		all year in the tropics	July - December in Texas	nectar, dung	86	89	87.5	aposematic
+Dryas	iulia	Nymphalidae	Heliconiinae	yes	both	G5		3				singly	aposematic	yes		throughout the year in southern Flordia and South Texas		nectar	82	92	87.0	aposematic
+Dymasia	dymas	Nymphalidae	Nymphalinae	yes	both	G5		3	4			clutches	aposematic	yes		February - November		nectar	23	35	29.0	aposematic
+Dynamine	dyonis	Nymphalidae	Biblidinae	yes	both	G5		1		1		singly				March - November in Mexico	May - November in Texas	nectar	41	48	44.5	aposematic
+Electrostrymon	angelia	Lycaenidae	Theclinae	yes	both	G4		3				singly	aposematic	yes		January - November		nectar	20	29	24.5	aposematic
+Electrostrymon	guzanta	Lycaenidae	Theclinae	yes															23	23	23.0	aposematic
+Electrostrymon	mathewi	Lycaenidae	Theclinae																			aposematic
+Emesis	ares	Riodinidae	Riodininae	yes	both	G4		1								July - September		nectar	32	35	33.5	aposematic
+Emesis	emesia	Riodinidae	Riodininae	yes	natural	G4		1		1			cryptic	yes		July - January in Mexico	October - November in South Texas	nectar	25	32	28.5	cryptic
+Emesis	tenedia	Riodinidae	Riodininae	yes	both	G4		1		1		clutches				July - January in Mexico and Central America	August and October in South Texas	nectar	30	35	32.5	aposematic
+Emesis	zela	Riodinidae	Riodininae	yes	both	G4		2								March - August		nectar	29	32	30.5	aposematic
+Enodia	anthedon	Nymphalidae	Satyrinae	yes	both	G5	larva	2		1		singly	cryptic	yes		May - September	June - August	dung, fungi, carrion, and sap	45	67	56.0	aposematic
+Enodia	creola	Nymphalidae	Satyrinae	yes	natural	G4	larva	3		2		singly	cryptic	yes		April - September	June - September	rotting fruit, dung, sap, carrion	59	70	64.5	aposematic
+Enodia	portlandia	Nymphalidae	Satyrinae	yes	natural	G4	larva	3				singly	aposematic	yes		March - October		sap, rotting fruit, carrion, dung	56	70	63.0	aposematic
+Epargyreus	clarus	Hesperiidae	Pyrginae										aposematic	no					45	67	56.0	aposematic
+Epargyreus	socus	Hesperiidae	Pyrginae																52	59	55.5	aposematic
+Epargyreus	zestos	Hesperiidae	Pyrginae	yes	both	G4		1					cryptic	yes		January - November 		nectar	45	60	52.5	cryptic
+Ephyriades	brunneus	Hesperiidae	Pyrginae	yes	both	G3		1				singly	cryptic	yes		throughout the year in southern Flordia		nectar	42	48	45.0	aposematic
+Epiphile	adrasta	Nymphalidae	Biblidinae	yes	natural	GU		1				singly				all year in Mexico	October in South Texas	sap, rotting fruit, and dung	57	67	62.0	aposematic
+Erebia	callias	Nymphalidae	Satyrinae	yes	both	G5		1				singly				mid - July to mid - August		nectar	35	38	36.5	cryptic
+Erebia	dabanensis	Nymphalidae	Satyrinae	yes															35	44	39.5	cryptic
+Erebia	disa	Nymphalidae	Satyrinae	yes			larva						cryptic	yes					40	50	45.0	aposematic
+Erebia	discoidalis	Nymphalidae	Satyrinae	yes	both	G5	larva	1					cryptic	yes		early May - mid June		nectar	38	49	43.5	cryptic
+Erebia	epipsodea	Nymphalidae	Satyrinae	yes	both	G5	larva	1				singly	aposematic	yes		mid- June to early August		nectar	42	51	46.5	aposematic
+Erebia	fasciata	Nymphalidae	Satyrinae	yes	natural												June-July		38	53	45.5	aposematic
+Erebia	magdalena	Nymphalidae	Satyrinae	yes	both	G5	larva	1				singly	aposematic	yes		late June - July		nectar	45	51	48.0	aposematic
+Erebia	mancinus	Nymphalidae	Satyrinae	yes	natural	G5		0.5								late May - early Juny			41	45	43.0	aposematic
+Erebia	occulta	Nymphalidae	Satyrinae	yes	natural												June-July		31	42	36.5	aposematic
+Erebia	rossii	Nymphalidae	Satyrinae	yes	natural												June-July		31	44	37.5	aposematic
+Erebia	theano	Nymphalidae	Satyrinae	no																		aposematic
+Eresia	phillyra	Nymphalidae	Satyrinae	yes																		aposematic
+Erionota	thrax	Hesperiidae	Hesperiinae	no	both							singly	cryptic	yes					70	77	73.5	aposematic
+Erora	laeta	Lycaenidae	Theclinae	yes	both	G4	chrysalis	3		2		singly				April - September	April - September	nectar	22	24	23.0	aposematic
+Erora	quaderna	Lycaenidae	Theclinae	yes	both	G4		1					cryptic	yes		June - July		nectar	22	29	25.5	aposematic
+Erynnis	afranius	Hesperiidae	Pyrginae	yes	both	G4	larva	2	3	2		singly	cryptic	yes		March - August	May - August	nectar	32	35	33.5	cryptic
+Erynnis	baptisiae	Hesperiidae	Pyrginae	yes	both	G5	larva	2				singly	cryptic	yes		late April - early June, July - August		nectar	35	41	38.0	cryptic
+Erynnis	brizo	Hesperiidae	Pyrginae	yes	both	G5	larva	1		1		singly	cryptic	yes		January - May	March - June	nectar	32	45	38.5	cryptic
+Erynnis	funeralis	Hesperiidae	Pyrginae	yes	both	G5	larva	3				singly	cryptic	yes		March - December		nectar	34	45	39.5	cryptic
+Erynnis	horatius	Hesperiidae	Pyrginae	yes	both	G5	larva	3		2		singly	cryptic	yes		January - November	April - September	nectar	36	49	42.5	cryptic
+Erynnis	icelus	Hesperiidae	Pyrginae										aposematic	yes					29	38	33.5	cryptic
+Erynnis	juvenalis	Hesperiidae	Pyrginae	yes	both	G5	larva	1				singly	cryptic	yes		April - June		nectar	32	49	40.5	cryptic
+Erynnis	lucilius	Hesperiidae	Pyrginae	yes	natural	G4	larva	2				singly	cryptic	yes		April - September		nectar	30	42	36.0	cryptic
+Erynnis	martialis	Hesperiidae	Pyrginae	yes	both	G4	larva	2				singly	cryptic	yes		April - September		nectar	29	42	35.5	cryptic
+Erynnis	meridianus	Hesperiidae	Pyrginae	yes	both	G4	larva	2				singly	cryptic	yes		March - September		nectar	42	48	45.0	cryptic
+Erynnis	pacuvius	Hesperiidae	Pyrginae	yes	both	G4	larva	1	2	1		singly	cryptic	yes		April - September	May - June	nectar	32	35	33.5	cryptic
+Erynnis	persius	Hesperiidae	Pyrginae	yes	natural	G4	larva	1				singly	cryptic	yes		April - June		nectar	29	42	35.5	cryptic
+Erynnis	propertius	Hesperiidae	Pyrginae	yes	both	G4	larva	1								March - July		nectar	35	45	40.0	cryptic
+Erynnis	scudderi	Hesperiidae	Pyrginae	yes	both	G4		2								May - August		nectar	32	35	33.5	cryptic
+Erynnis	telemachus	Hesperiidae	Pyrginae	yes	both	G4		1				singly	cryptic	yes		April - July		nectar	35	45	40.0	cryptic
+Erynnis	tristis	Hesperiidae	Pyrginae	yes	both	G4	larva	3				singly	cryptic	yes		March - April, June - July, September - November		nectar	32	49	40.5	cryptic
+Erynnis	zarucco	Hesperiidae	Pyrginae	yes	both	G5	larva	3				singly	cryptic	yes		March - October		nectar	42	48	45.0	cryptic
+Euchloe	ausonides	Pieridae	Pierinae	yes	both	G5	chrysalis	1	2	1		singly	aposematic	yes		February - April, May - August	May - July	nectar	38	51	44.5	aposematic
+Euchloe	creusa	Pieridae	Pierinae	yes	both	G5	chrysalis	1				singly				May - July		nectar	35	42	38.5	aposematic
+Euchloe	hyantis	Pieridae	Pierinae	yes	natural		chrysalis					singly	cryptic	yes		April-July		nectar	28	37	32.5	cryptic
+Euchloe	olympia	Pieridae	Pierinae	yes	both	G4	chrysalis	1				singly	aposematic	yes		April - July		nectar	35	51	43.0	aposematic
+Eueides	isabella	Nymphalidae	Heliconiinae	yes	both	G5		1		1		singly	aposematic	yes	yes	throughout the year in the tropics	April - July in Texas	nectar	78	90	84.0	aposematic
+Eumaeus	atala	Lycaenidae	Theclinae	yes	both	G4		1				cluthces	aposematic	yes	yes	throughout the year, most common in early summer		nectar	38	51	44.5	aposematic
+Eumaeus	childrenae	Lycaenidae	Theclinae	yes	natural								aposematic						68	68	68.0	aposematic
+Eunica	monima	Nymphalidae	Biblidinae	yes	natural	G5		1		1	2	singly	cryptic	yes		all year in Mexico	June - September in South Texas, May - December in southern Flordia	rotting fruit, dung, sap	48	51	49.5	aposematic
+Eunica	tatila	Nymphalidae	Biblidinae	yes	natural	G4		1				clutches	aposematic	yes		throughout the year in southern Flordia		nectar, rotting fruit	40	62	51.0	aposematic
+Euphilotes	battoides	Lycaenidae	Polyommatinae	yes	both	G5	chrysalis	1				singly	aposematic	yes		mid - April to August		nectar	16	17	16.5	aposematic
+Euphilotes	enoptes	Lycaenidae	Polyommatinae	yes	both	G5	chrysalis	1				singly				mid - May to October		nectar	18	23	20.5	aposematic
+Euphilotes	rita	Lycaenidae	Polyommatinae	yes	both	G3		1				singly				July - late September		nectar	17	22	19.5	aposematic
+Euphilotes	spaldingi	Lycaenidae	Polyommatinae	yes	natural	G3		1					aposematic	yes		June - July		nectar	25	29	27.0	aposematic
+Euphydryas	chalcedona	Nymphalidae	Nymphalinae	yes	both	G5	larva	1	3	1		clutches	aposematic	yes	yes	April - October	June - July	nectar	32	57	44.5	aposematic
+Euphydryas	editha	Nymphalidae	Nymphalinae	yes	both	G5	larva	1				clutches	aposematic	yes		March - May at low elevations, June - August at high elevations		nectar	32	51	41.5	aposematic
+Euphydryas	gillettii	Nymphalidae	Nymphalinae	yes	both	G3	larva	1				clutches	aposematic	yes	yes	June - August		nectar	38	48	43.0	aposematic
+Euphydryas	phaeton	Nymphalidae	Nymphalinae	yes	both	G4	larva	1				clutches	aposematic	yes		May - June	June - August	nectar	45	70	57.5	aposematic
+Euphyes	arpa	Hesperiidae	Hesperiinae	yes	natural	G3	larva	3					cryptic	yes		March - November		nectar	41	49	45.0	aposematic
+Euphyes	bayensis	Hesperiidae	Hesperiinae	yes	both	G2		2								May - September		nectar	37	44	40.5	aposematic
+Euphyes	berryi	Hesperiidae	Hesperiinae	yes	both	G3	larva	2								March - October		nectar	35	45	40.0	cryptic
+Euphyes	bimacula	Hesperiidae	Hesperiinae	yes	both	G4	larva	2		1			cryptic			May - August	June - July	nectar	32	42	37.0	cryptic
+Euphyes	conspicua	Hesperiidae	Hesperiinae	yes	both	G4	larva	1								June - August		nectar	32	42	37.0	cryptic
+Euphyes	dion	Hesperiidae	Hesperiinae	yes	natural	G4	larva	2		1		singly	cryptic	yes		May - September	July - early August	nectar	37	45	41.0	cryptic
+Euphyes	dukesi	Hesperiidae	Hesperiinae	yes	both	G3	larva	3		2		singly	aposematic	yes		May - November	June - September  	nectar	38	45	41.5	cryptic
+Euphyes	pilatka	Hesperiidae	Hesperiinae	yes	both	G3	larva	2	3	2		singly	cryptic	yes		January - November	May - September	nectar	45	54	49.5	cryptic
+Euphyes	vestris	Hesperiidae	Hesperiinae	yes	both	G5	larva	2	3	1		singly	cryptic	yes		May - September in the mid-south, March - October in the deep South and Texas	June - early August	nectar	29	35	32.0	cryptic
+Euptoieta	claudia	Nymphalidae	Heliconiinae	yes	both	G5	larva	4		3		singly	aposematic	yes		February or March - November or December	April - October	nectar	45	80	62.5	aposematic
+Euptoieta	hegesia	Nymphalidae	Heliconiinae	yes	both	G5		1		1		singly	aposematic	yes		all year in South Texas and tropics	September - October in central Texas	nectar, dung	65	75	70.0	aposematic
+Eurema	boisduvaliana	Pieridae	Coliadinae	yes	both	G5		1		1			cryptic	yes		throughout the year in tropics	April - November in south Texas and northward	nectar	38	51	44.5	cryptic
+Eurema	daira	Pieridae	Coliadinae	yes	both	G5	adult	1				singly	cryptic	yes		throughout the year in the Deep South		nectar	32	41	36.5	cryptic
+Eurema	dina	Pieridae	Coliadinae																32	57	44.5	aposematic
+Eurema	lisa	Pieridae	Coliadinae	yes	both	G5		4	5	1	3	singly	cryptic	yes		late spring to early fall	late spring to early fall	nectar	32	44	38.0	aposematic
+Eurema	mexicana	Pieridae	Coliadinae	yes	both	G5		1		1		singly	aposematic	yes		all year in the tropics	midsummer to fall	nectar	44	63	53.5	aposematic
+Eurema	nicippe	Pieridae	Coliadinae	yes	both	G5	adult	4	5			singly	cryptic	yes		througout the year	mid to late summer in the north	nectar	35	57	46.0	aposematic
+Eurema	nise	Pieridae	Coliadinae																29	51	40.0	aposematic
+Eurema	proterpia	Pieridae	Coliadinae																32	44	38.0	aposematic
+Eurytides	marcellus	Papilionidae	Papilioninae	yes	both	G5	larva	2	3	2		singly	aposematic	yes	yes	March - December	April - August	nectar	64	104	84.0	aposematic
+Eurytides	philolaus	Papilionidae	Papilioninae	yes	both	G5		2					aposematic	yes		March - November		nectar	90	95	92.5	aposematic
+Everes	comyntas	Lycaenidae	Polyommatinae																21	29	25.0	aposematic
+Feniseca	tarquinius	Lycaenidae	Miletinae	yes	natural	G4	chrysalis	3		2		singly	aposematic	yes		February - September	May - August	honeydew	30	32	31.0	aposematic
+Ganyra	josephina	Pieridae	Pierinae	yes	natural	G5		1				singly	cryptic	yes		September - December		nectar	73	96	84.5	aposematic
+Gesta	invisus	Hesperiidae	Pyrginae	yes	both	G5	larva	4		4			aposematic	yes		all year south of Texas	April - November in south Texa	nectar	24	35	29.5	cryptic
+Glaucopsyche	lygdamus	Lycaenidae	Polyommatinae	yes	both	G5	chrysalis	1				singly	aposematic	yes		March - June at low elevations, June - August at high elevations		nectar	22	32	27.0	aposematic
+Glaucopsyche	piasus	Lycaenidae	Polyommatinae	yes	both	G5	chrysalis	1				singly	aposematic	yes		March - July		nectar	29	35	32.0	aposematic
+Gorgythion	begga	Hesperiidae	Pyrginae	yes	both	G5		1								March and December in South Texas			24	27	25.5	cryptic
+Grais	stigmatica	Hesperiidae	Pyrginae	yes	both	G5		1		1						March - December in Mexico	April and July - October in South Texas		46	54	50.0	cryptic
+Gyrocheilus	patrobas	Nymphalidae	Satyrinae	yes	natural	G4		1					cryptic	yes		mid - August to October			51	60	55.5	aposematic
+Habrodais	grunus	Lycaenidae	Theclinae	yes	natural	G5	egg	1					cryptic	yes		June - September		mud, honeydew	25	32	28.5	cryptic
+Hamadryas	amphinome	Nymphalidae	Biblidinae	yes	both	G5		1		1		clutches	aposematic	yes		throughout the year in Mexico and the tropics	September in Texas	rotting fruit	78	86	82.0	aposematic
+Hamadryas	februa	Nymphalidae	Biblidinae	yes	both	G5		1		1		singly	aposematic	yes		throughout the year in the tropics	August - October in south Texas	sap and rotting fruit	70	86	78.0	aposematic
+Hamadryas	guatemalena	Nymphalidae	Biblidinae	yes	both	G4		1		1		singly	aposematic	yes		all year in the tropics	August in south Texas	sap, dung, and rotting fruit	76	98	87.0	aposematic
+Heliconius	charithonia	Nymphalidae	Heliconiinae	yes	both	G5		1				clutches	aposematic	yes		all year in south Texas and southern Flordia		nectar	70	101	85.5	aposematic
+Heliconius	erato	Nymphalidae	Heliconiinae	yes	both	G5		1		2		singly	aposematic	yes		all year in the tropics	June and August - September	nectar, pollen  	67	80	73.5	aposematic
+Heliopetes	domicella	Hesperiidae	Pyrginae	yes	both	G5		1		1		singly	cryptic	yes		all year in the tropics	April - December in south Texas	nectar	29	35	32.0	aposematic
+Heliopetes	ericetorum	Hesperiidae	Pyrginae	yes	both	G4		2	3			singly	cryptic	yes		April - October		nectar	32	38	35.0	aposematic
+Heliopetes	laviana	Hesperiidae	Pyrginae	yes	both	G5		2				singly	cryptic	yes		throughout the year		nectar	35	42	38.5	aposematic
+Heliopetes	macaira	Hesperiidae	Pyrginae	yes	both	G5		1					aposematic	yes		April - November		nectar	32	35	33.5	aposematic
+Heliopetes	sublinea	Hesperiidae	Pyrginae																			aposematic
+Hemiargus	ceraunus	Lycaenidae	Polyommatinae	yes	both	G5		1				singly	cryptic	yes		throughout the year in Texas and south Flordia		nectar	20	30	25.0	aposematic
+Hemiargus	isola	Lycaenidae	Polyommatinae	yes	both	G5		3		1		singly	cryptic	yes		all year in south Texas	March - November	nectar	20	29	24.5	aposematic
+Hermeuptychia	sosybius	Nymphalidae	Satyrinae	yes	both	G5		3		3		singly	cryptic	yes		throughout the year in South Texas and Deep South	April - October	sap and rotting fruit	32	38	35.0	aposematic
+Hesperia	attalus	Hesperiidae	Hesperiinae	yes	both	G3		2								May - September		nectar	35	42	38.5	cryptic
+Hesperia	columbia	Hesperiidae	Hesperiinae	yes	both	G4		2								March - June, September - October		nectar	22	34	28.0	cryptic
+Hesperia	comma	Hesperiidae	Hesperiinae	yes	both	G5	chrysalis	1				singly	cryptic	no		early June - mid September		nectar	22	30	26.0	aposematic
+Hesperia	dacotae	Hesperiidae	Hesperiinae	yes	natural	G2	larva	1				singly	cryptic	yes				nectar	25	35	30.0	aposematic
+Hesperia	juba	Hesperiidae	Hesperiinae	yes	natural	G5		2	2	2	2	singly	aposematic	no					32	42	37.0	aposematic
+Hesperia	leonardus	Hesperiidae	Hesperiinae	yes	both	G4	larva	1	1	1	1		cryptic	yes				nectar	32	45	38.5	aposematic
+Hesperia	lindseyi	Hesperiidae	Hesperiinae	yes	natural	G3	eggs	1	1	1	1	singly							29	32	30.5	aposematic
+Hesperia	meskei	Hesperiidae	Hesperiinae	yes	both	G3	larva			2	2	singly	cryptic						32	39	35.5	aposematic
+Hesperia	metea	Hesperiidae	Hesperiinae	yes	natural	G4	larva	1	1	1	1	singly	aposematic	no					29	35	32.0	aposematic
+Hesperia	miriamae	Hesperiidae	Hesperiinae	yes	natural	G2	larva	1	1	1	1								29	32	30.5	aposematic
+Hesperia	nevada	Hesperiidae	Hesperiinae	yes	natural	G5	larva	1	1	1	1	singly							29	37	33.0	aposematic
+Hesperia	ottoe	Hesperiidae	Hesperiinae	yes	natural	G3	larva	1	1	1	1	singly							32	43	37.5	aposematic
+Hesperia	pahaska	Hesperiidae	Hesperiinae	yes	natural	G5	larva	2	2	1	1	singly							32	42	37.0	aposematic
+Hesperia	sassacus	Hesperiidae	Hesperiinae	yes	both	G5	larva	1	1	1	1		cryptic					nectar	32	35	33.5	aposematic
+Hesperia	uncas	Hesperiidae	Hesperiinae	yes	natural	G4		1	2	1	2	singly	cryptic					nectar	29	42	35.5	aposematic
+Hesperia	viridis	Hesperiidae	Hesperiinae	yes	natural	G5		2	2	2	2	singly						nectar	25	38	31.5	aposematic
+Hesperia	woodgatei	Hesperiidae	Hesperiinae	yes	natural	G3	larva	1	1	1	1	singly						nectar	32	43	37.5	aposematic
+Hesperopsis	alpheus	Hesperiidae	Pyrginae	yes	natural	G4		2	2	2	2							nectar	20	32	26.0	cryptic
+Hesperopsis	libya	Hesperiidae	Pyrginae	yes	natural	G5				1	2	singly	cryptic	no				nectar	22	32	27.0	cryptic
+Historis	acheronta	Nymphalidae	Limenitidinae	yes	natural	G5						singly						rotting fruit	88	110	99.0	cryptic
+Hylephila	phyleus	Hesperiidae	Hesperiinae	yes	both	G5	chrysalis					singly	cryptic	no				nectar	32	38	35.0	cryptic
+Hypaurotis	crysalus	Lycaenidae	Theclinae	yes	natural	T1	eggs	1	1	1	1	singly	cryptic	yes				sap, raindrops, honeydew	32	38	35.0	aposematic
+Junonia	coenia	Nymphalidae	Nymphalinae	yes	both	G5	adult			2	3	singly	aposematic	yes				nectar	42	70	56.0	aposematic
+Junonia	evarete	Nymphalidae	Nymphalinae	yes	natural	G5	adult	3	4	3	4	singly	aposematic	yes				nectar	45	57	51.0	aposematic
+Junonia	genoveva	Nymphalidae	Nymphalinae	yes	both	G5	adult						aposematic	yes				nectar	35	57	46.0	aposematic
+Kricogonia	lyside	Pieridae	Coliadinae	yes	natural	G5												nectar	38	60	49.0	cryptic
+Lampides	boeticus	Lycaenidae	Lycaeninae	no	both	G5													24	32	28.0	cryptic
+Lasaia	maria	Riodinidae	Riodininae	yes																		aposematic
+Lasaia	sula	Riodinidae	Riodininae	yes	natural	G5													22	32	27.0	aposematic
+Leptophobia	aripa	Pieridae	Pierinae	yes									aposematic	no					42	44	43.0	cryptic
+Leptotes	cassius	Lycaenidae	Polyommatinae	yes	natural	G5						singly	cryptic	yes				nectar	20	35	27.5	aposematic
+Leptotes	marina	Lycaenidae	Polyommatinae	yes	both	G5						singly	cryptic	no		throughout year	April-Sept.	nectar	22	29	25.5	aposematic
+Lerema	accius	Hesperiidae	Hesperiinae	yes	both	G5							cryptic	no		throughout year		nectar	32	45	38.5	cryptic
+Lerodea	arabus	Hesperiidae	Hesperiinae	yes	both	G5						singly	cryptic	no		February-December		nectar	24	32	28.0	cryptic
+Lerodea	dysaules	Hesperiidae	Hesperiinae																25	32	28.5	cryptic
+Lerodea	eufala	Hesperiidae	Hesperiinae	yes	both	G5		2				singly	cryptic	no				nectar	25	32	28.5	cryptic
+Libytheana	carinenta	Nymphalidae	Libytheinae	yes	both	G5	adult	2	2	2	2	singly	cryptic	no				nectar	35	50	42.5	aposematic
+Limenitis	archippus	Nymphalidae	Limenitidinae	yes	both	G5	larva	2	3	2	3	singly	aposematic	yes				mud, dung, carrion, nectar	63	86	74.5	aposematic
+Limenitis	arthemis	Nymphalidae	Limenitidinae	yes	both	G5	larva	2	2	2	2	singly	cryptic	yes				nectar, sap, rotting fruit, dung	57	101	79.0	aposematic
+Limenitis	lorquini	Nymphalidae	Limenitidinae	yes	natural	G5	larva			1	1		cryptic	yes		April-October		nectar	51	67	59.0	aposematic
+Limenitis	weidemeyerii	Nymphalidae	Limenitidinae	yes	both	G5	larva	1	2	1	2	singly	cryptic	yes				nectar, carrion, sap	57	95	76.0	aposematic
+Lycaeides	idas	Lycaenidae	Polyommatinae	yes	natural	G5	larva	1	1	1	1	singly						nectar	22	38	30.0	aposematic
+Lycaeides	melissa	Lycaenidae	Polyommatinae	yes	both	G5		2	3	2	3		cryptic	yes				nectar	22	35	28.5	aposematic
+Lycaena	arota	Lycaenidae	Lycaeninae	yes	both	G5	eggs					singly						nectar	30	35	32.5	aposematic
+Lycaena	cupreus	Lycaenidae	Lycaeninae	yes	natural	G5	larva	1	1	1	1	singly	cryptic	yes				nectar	29	31	30.0	aposematic
+Lycaena	dione	Lycaenidae	Lycaeninae	yes	natural	G5							cryptic	no				nectar	24	38	31.0	aposematic
+Lycaena	dorcas	Lycaenidae	Lycaeninae	yes	natural	G5	eggs	1	1	1	1	singly						nectar	25	32	28.5	cryptic
+Lycaena	editha	Lycaenidae	Lycaeninae	yes	natural	G5		1	1	1	1							nectar	22	30	26.0	aposematic
+Lycaena	epixanthe	Lycaenidae	Lycaeninae	yes	natural	G5	eggs	1	1	1	1	singly	cryptic	yes				nectar, raindrops	22	25	23.5	cryptic
+Lycaena	gorgon	Lycaenidae	Lycaeninae	yes	natural	G3	eggs	1	1	1	1	singly	cryptic	no				nectar	32	38	35.0	cryptic
+Lycaena	helloides	Lycaenidae	Lycaeninae	yes	both	G5	eggs						cryptic	no		 May-July, August-October	July-August	nectar	30	38	34.0	aposematic
+Lycaena	heteronea	Lycaenidae	Lycaeninae	yes	both	G5	eggs	1	1	1	1	singly						nectar	29	35	32.0	cryptic
+Lycaena	hyllus	Lycaenidae	Lycaeninae	yes	natural	G5	eggs					singly	cryptic	no		May-November	June-September	nectar	32	48	40.0	aposematic
+Lycaena	mariposa	Lycaenidae	Lycaeninae	yes	natural	G5		1	1	1	1		cryptic	yes				nectar	29	32	30.5	aposematic
+Lycaena	nivalis	Lycaenidae	Lycaeninae	yes	natural	G5	eggs	1	1	1	1	singly	cryptic	no		June-August (south not specified)	June-August (north not specified)	nectar	25	35	30.0	aposematic
+Lycaena	phlaeas	Lycaenidae	Lycaeninae	yes	both	G5	chrysalis	3	3	2	3	singly	cryptic	yes		August-September	June-July	nectar	22	35	28.5	aposematic
+Lycaena	rubidus	Lycaenidae	Lycaeninae	yes	natural	G5	eggs	1	1	1	1	singly	cryptic	no		June-August (south not specified)	June-August (south not specified)	nectar	29	41	35.0	aposematic
+Lycaena	xanthoides	Lycaenidae	Lycaeninae	yes	natural	G4							cryptic	yes		May to mid-August (south not specified)	May to mid-August (north not specified)	nectar	33	44	38.5	aposematic
+Marpesia	chiron	Nymphalidae	Limenitidinae	yes	natural	G5						singly	aposematic	yes		May-December in Mexico, February and July-October in South Texas.	probably all year in Central America	nectar	54	67	60.5	aposematic
+Marpesia	petreus	Nymphalidae	Limenitidinae	yes	natural	G5							aposematic	yes		Most of the year	Most of the year	nectar	70	95	82.5	cryptic
+Megathymus	cofaqui	Hesperiidae	Megathyminae	yes	natural	G3	larva	1	2	1	2	singly				Florida from March-November	Georgia from July-September	mud	50	63	56.5	cryptic
+Megathymus	streckeri	Hesperiidae	Megathyminae	yes	natural	G5	larva	1	1	1	1	singly	cryptic	no		May-July (south not specified)	May-July (north not specified)	mud	57	78	67.5	cryptic
+Megathymus	ursus	Hesperiidae	Megathyminae	yes	natural	G4	larva	1	1	1	1	singly				May-August (south not specified)	May-August (north not specified)	mud	63	76	69.5	aposematic
+Megathymus	yuccae	Hesperiidae	Megathyminae	yes	natural	G5	larva	1	1	1	1	singly	cryptic	no		mid-February to mid-May (south not specified)	mid-February to mid-May (north not specified)	mud	48	79	63.5	aposematic
+Megisto	cymela	Nymphalidae	Satyrinae	yes	both	G5	larva	2	3	1	1	singly	cryptic	yes		March-September	June-July	sap, honeydew	38	48	43.0	aposematic
+Megisto	rubricata	Nymphalidae	Satyrinae	yes	natural	G5	larva	2	2	2	2		cryptic	no		April-September (south not specified)	April-September (north no specified)		35	48	41.5	aposematic
+Melanis	pixe	Riodinidae	Riodininae	yes	both	G5						clutches	aposematic	yes		January-November in South Texas		nectar	38	44	41.0	aposematic
+Mestra	amymone	Nymphalidae	Biblidinae	yes	natural	G5							cryptic	yes		throughout year	throughout year	nectar	35	50	42.5	aposematic
+Microtia	elva	Nymphalidae	Nymphalinae	yes	natural	G5							cryptic	yes		throughout year in tropics	throughout year in tropics	nectar	25	37	31.0	aposematic
+Ministrymon	azia	Lycaenidae	Theclinae	yes	both	G5										March-September in Florida and Texas	March-September in Florida and Texas	nectar	16	24	20.0	aposematic
+Ministrymon	clytie	Lycaenidae	Theclinae	yes	natural	G5										February-December in South Texas	February-December in South Texas	nectar	19	22	20.5	aposematic
+Ministrymon	leda	Lycaenidae	Theclinae	yes	natural	G5		2	2	2	2	singly				October-November (south not specified)	October-November (north no specified)	nectar	19	22	20.5	aposematic
+Morpho	polyphemus	Nymphalidae	Morphinae	yes	natural							singly	aposematic	yes		May-November in Mexico	May-November in Mexico	rotting fruit	114.3	146.05	130.2	cryptic
+Myscelia	cyananthe	Nymphalidae	Biblidinae	yes	natural	G5										Many flights throughout the year in Mexico	Many flights throughout the year in Mexico	rotting fruit	51	64	57.5	aposematic
+Myscelia	ethusa	Nymphalidae	Biblidinae	yes	natural	G5							cryptic	yes		 Many flights throughout the year in South Texas	 Many flights throughout the year in South Texas	rotting fruit	64	76	70.0	aposematic
+Nastra	julia	Hesperiidae	Hesperiinae	yes	both	G5							cryptic	no		April-October	April-October	nectar	24	29	26.5	cryptic
+Nastra	lherminier	Hesperiidae	Hesperiinae	yes	both	G5		2	2	2	2					May-September (south no specified)	May-September (north not specified)	nectar	25	29	27.0	cryptic
+Nastra	neamathla	Hesperiidae	Hesperiinae	yes	natural	G5		3	3	3	3					February-October (south not specified)	February-October (north not specified)	nectar	22	29	25.5	cryptic
+Nathalis	iole	Pieridae	Coliadinae	yes	both	G5	adult					singly	cryptic	yes				nectar	20	32	26.0	cryptic
+Neominois	ridingsii	Nymphalidae	Satyrinae	yes	natural	G5	larva	1	1	1	1	singly	cryptic	no		June-July (south not specified)	June-July (north not specified)	nectar	38	56	47.0	aposematic
+Neonympha	areolata	Nymphalidae	Satyrinae	yes	natural	G3	larva	1	2	1	2	singly				June-July, April-September (south not specified)	June-July, April-September (north not specified)		37	49	43.0	cryptic
+Neonympha	mitchellii	Nymphalidae	Satyrinae	yes	natural	T2	larva					singly	cryptic	no		late June to early July (south not specified)	late June to early July (north not specified)		35	45	40.0	aposematic
+Neophasia	menapia	Pieridae	Pierinae	yes	natural	G5	eggs					clutches	cryptic	no		une-September (south not speicified)	une-September (north not specified)		45	58	51.5	aposematic
+Neophasia	terlooii	Pieridae	Pierinae	yes	natural	G4										June-July and September-November (south not specified)	June-July and September-November (north not specified)	nectar	45	58	51.5	aposematic
+Noctuana	lactifera	Hesperiidae	Pyrginae	yes															35	35	35.0	aposematic
+Notamblyscirtes	simius	Hesperiidae	Hesperiinae	yes	natural	G4				1	1	singly				April-August	May-July	nectar	22	32	27.0	cryptic
+Nyctelius	nyctelius	Hesperiidae	Hesperiinae	yes	natural	G5						singly	cryptic	yes		May-December		nectar	27	39	33.0	cryptic
+Nymphalis	antiopa	Nymphalidae	Nymphalinae	yes	natural	G5	adult	1	1	1	1	clutches	aposematic	yes		June-July	June-July	nectar, sap, rotting fruit	57	101	79.0	aposematic
+Nymphalis	californica	Nymphalidae	Nymphalinae	yes	natural	G5	adult	2	2	2	2	clutches	aposematic	yes				nectar	32	70	51.0	aposematic
+Nymphalis	milberti	Nymphalidae	Nymphalinae	yes	both	G5	adult	2	3	2	3	clutches	aposematic	yes		May-October (south not specified)	May-October (north not specified)	nectar, sap, rotting fruit	42	63	52.5	aposematic
+Nymphalis	vaualbum	Nymphalidae	Nymphalinae	yes	both	G5	adult	1	1	1	1	clutches	aposematic	yes		July-November (south not specified)	July-November (north not specified)	nectar, rotting fruit	64	78	71.0	aposematic
+Oarisma	edwardsii	Hesperiidae	Hesperiinae	yes	natural	G5		1		1								nectar	22	29	25.5	aposematic
+Oarisma	garita	Hesperiidae	Hesperiinae	yes	natural	G5	larva	1	1	1	1	singly	cryptic	no		June-July (south not specified)	June-July (north not specified)	nectar	19	30	24.5	aposematic
+Oarisma	poweshiek	Hesperiidae	Hesperiinae	yes	natural	G1	larva	1	1	1	1	singly	cryptic	no		June-August (south not specified)	June-August (north not specified)	nectar	25	32	28.5	cryptic
+Ochlodes	agricola	Hesperiidae	Hesperiinae	yes	natural	T4		1	1	1	1					May-June (south not specified)	May-June (north not specified)	nectar	22	29	25.5	aposematic
+Ochlodes	sylvanoides	Hesperiidae	Hesperiinae	yes	natural	G5	larva	1	1	1	1		cryptic	no		July-October (south not specified)	July-October (north not specified)	nectar	25	32	28.5	aposematic
+Ochlodes	yuma	Hesperiidae	Hesperiinae	yes	natural	G5		2	2	2	2		cryptic	no		June-July and August-September from California north to southern Utah; one brood from July-September along the Colorado River	June-July and August-September from California north to southern Utah; one brood from July-September along the Colorado River	nectar	29	35	32.0	aposematic
+Oeneis	alberta	Nymphalidae	Satyrinae	yes	natural	G5	larva	1	1	1	1					May-June (south not specified)	May-June (north not specified)		35	57	46.0	cryptic
+Oeneis	chryxus	Nymphalidae	Satyrinae	yes	natural	G5	larva	1	1	1	1					May-early June (south not specified)	May-early June (north not specified)	nectar	45	54	49.5	cryptic
+Oeneis	jutta	Nymphalidae	Satyrinae	yes	natural	G5	larva	1	1	1	1		cryptic	no		mid-July to early August (south not specified)	mid-July to early August (north not specified)	nectar	48	60	54.0	cryptic
+Oeneis	macounii	Nymphalidae	Satyrinae	yes	natural	G5	larva	1	1	1	1					June to early July (south not specified)	June to early July (north not specified)	nectar	57	70	63.5	aposematic
+Oeneis	melissa	Nymphalidae	Satyrinae	yes	natural	G5	larva	1	1	1	1					mid-June to early August (south not specified)	mid-June to early August (north not specified)		42	51	46.5	cryptic
+Oeneis	nevadensis	Nymphalidae	Satyrinae	yes	natural	G5	larva	1	1	1	1					May-July (south not specified)	May-July (north not specified)		57	63	60.0	cryptic
+Oeneis	polixenes	Nymphalidae	Satyrinae	yes	natural	G5	larva	1	1	1	1					mid-June to early August (south not specified)	mid-June to early August (north not specified)	nectar	42	54	48.0	cryptic
+Oeneis	taygete	Nymphalidae	Satyrinae	yes	natural	G5	larva	1	1	1	1					 late July (south not specified)	 late July (north not specified)	nectar	37	48	42.5	cryptic
+Oeneis	uhleri	Nymphalidae	Satyrinae	yes	natural	G5	larva	1	1	1	1	singly				early June to early July (south not specified)	early June to early July (north not specified)		38	56	47.0	aposematic
+Oligoria	maculata	Hesperiidae	Hesperiinae	yes	natural	G4		2	3	2	3		cryptic	no		April-September (south not specified)	April-September (north not specified)	nectar	35	42	38.5	cryptic
+Opsiphanes	cassina	Nymphalidae	Morphinae	yes															70	70	70.0	cryptic
+Panoquina	errans	Hesperiidae	Hesperiinae	yes	natural	G4										 June-September in California	 June-September in California	nectar	25	32	28.5	cryptic
+Panoquina	fusina	Hesperiidae	Hesperiinae	yes	natural	G4										October-November	October-November	nectar	42	45	43.5	cryptic
+Panoquina	lucas	Hesperiidae	Hesperiinae	yes	natural	G5							cryptic	no		 August-December	 August-December	nectar	30	45	37.5	cryptic
+Panoquina	ocola	Hesperiidae	Hesperiinae	yes	both	G5							cryptic	no		throughout the year in Florida and South Texas.	In warm summer months in the north	nectar	35	43	39.0	cryptic
+Panoquina	panoquin	Hesperiidae	Hesperiinae	yes	natural	G5		3	3	2	2					April-October	May-August	nectar	35	39	37.0	cryptic
+Panoquina	panoquinoides	Hesperiidae	Hesperiinae	yes	both	G5		2	2							February-December, June-November		nectar	29	32	30.5	cryptic
+Panthiades	bathildis	Lycaenidae	Theclinae	yes															30	35	32.5	aposematic
+Papilio	anchisiades	Papilionidae	Papilioninae	yes	both	G5						clutches	cryptic	no		 May-October (south not specified)	 May-October (north not specified)	nectar	70	100	85.0	aposematic
+Papilio	andraemon	Papilionidae	Papilioninae	yes	natural	G4						singly	aposematic	no		April-October			96	102	99.0	aposematic
+Papilio	aristodemus	Papilionidae	Papilioninae	yes	natural	G3	chrysalis					singly	aposematic	no		 late April to mid-June (south not specified)	 late April to mid-June (north not specified)	nectar	92	118	105.0	aposematic
+Papilio	astyalus	Papilionidae	Papilioninae	yes	natural	G5												nectar	117	120	118.5	aposematic
+Papilio	canadensis	Papilionidae	Papilioninae	yes	natural	G5	chrysalis	1	1	1	1	singly	aposematic	no		 May to mid-July (south not specified)	 May to mid-July (north not specified)	nectar	67	80	73.5	aposematic
+Papilio	cresphontes	Papilionidae	Papilioninae	yes	both	G5	chrysalis			2	2		aposematic	yes		all year 	May-September	nectar	102	160	131.0	aposematic
+Papilio	erostratus	Papilionidae	Papilioninae	yes															98	98	98.0	aposematic
+Papilio	eurymedon	Papilionidae	Papilioninae	yes	natural	G5	chrysalis					singly	cryptic	no		April-July (south not specified)	April-July (north not specified)	nectar	64	90	77.0	aposematic
+Papilio	garamas	Papilionidae	Papilioninae	yes	both	G4							cryptic	no		February to November (south not specified)	February to November (north not specified)	Wild fuchsia	120	150	135.0	aposematic
+Papilio	glaucus	Papilionidae	Papilioninae	yes	both	G5	chrysalis	3	3	2	2	singly	cryptic	yes		February-November	 May-September	nectar	62	114	88.0	aposematic
+Papilio	indra	Papilionidae	Papilioninae	yes	natural	G5	chrysalis					singly	aposematic	yes		March-August (south not specified)	March-August (north not specified)	nectar	62	72	67.0	aposematic
+Papilio	joanae	Papilionidae	Papilioninae	yes	natural	G2	chrysalis					singly				April to September (south not specified)	April to September (north not specified)	nectar	82	102	92.0	aposematic
+Papilio	machaon	Papilionidae	Papilioninae	yes	both	G5	chrysalis	2	2	1	1	singly	aposematic	yes			May-July	nectar	65	75	70.0	aposematic
+Papilio	multicaudata	Papilionidae	Papilioninae	yes	natural	G5	chrysalis			1	1	singly	cryptic	no		most of year	 May to mid-August 	nectar	90	127	108.5	aposematic
+Papilio	ornythion	Papilionidae	Papilioninae	yes	both	G5							cryptic	no		April-September (south not specified)	April-September (north not specified)	nectar	83	115	99.0	aposematic
+Papilio	palamedes	Papilionidae	Papilioninae	yes	natural	G4 							cryptic	no			March-December	nectar	114	130	122.0	aposematic
+Papilio	pilumnus	Papilionidae	Papilioninae	yes	natural	G4							aposematic	yes				nectar	80	100	90.0	aposematic
+Papilio	polyxenes	Papilionidae	Papilioninae	yes	both	G5	chrysalis	3	3	2	2	singly	aposematic	yes		April-October	April-October	nectar	80	110	95.0	aposematic
+Papilio	rutulus	Papilionidae	Papilioninae	yes	both	G5	chrysalis	1	1	1	1	singly	cryptic	no		 June-July (south not specified)	 June-July (north not specified)	nectar	70	100	85.0	aposematic
+Papilio	thoas	Papilionidae	Papilioninae	yes	natural	G5							cryptic	no				nectar	105	128	116.5	aposematic
+Papilio	troilus	Papilionidae	Papilioninae	yes	natural	G5	chrysalis	2	2	2	2	singly	aposematic	no				nectar	75	100	87.5	aposematic
+Papilio	xuthus	Papilionidae	Papilioninae	no	both	G4							cryptic	no					45	55	50.0	aposematic
+Papilio	zelicaon	Papilionidae	Papilioninae	yes	both	G5	chrysalis	1	1	1	1	singly	aposematic	yes		April-July (south not specified)	April-July (north not specified)		70	90	80.0	aposematic
+Paramacera	allyni	Nymphalidae	Satyrinae	yes	natural	G4										June-August (south not specified)	June-August (north not specified)		35	48	41.5	cryptic
+Paratrytone	snowi	Hesperiidae	Hesperiinae	yes	natural	G5		1	1	1	1	singly				June-August (south not specified)	June-August (north not specified)	nectar	29	35	32.0	cryptic
+Parides	montezuma	Papilionidae	Papilioninae	yes															63.5	83.82	73.7	aposematic
+Parides	photinus	Papilionidae	Papilioninae	yes															35	39	37.0	aposematic
+Parnassius	clodius	Papilionidae	Parnassiinae	yes	natural	G5	eggs					singly	aposematic	no		June - July (south not specified)	June - July (north not specified)	nectar	50	62	56.0	cryptic
+Parnassius	eversmanni	Papilionidae	Parnassiinae	yes	natural	G5													48	57	52.5	aposematic
+Parnassius	phoebus	Papilionidae	Parnassiinae	yes	natural	G5													45	64	54.5	aposematic
+Parrhasius	m-album	Lycaenidae	Theclinae	yes	natural	G5		4	4	3	3		cryptic	yes		February-October	February-October	nectar	32	41	36.5	aposematic
+Parrhasius	moctezuma	Lycaenidae	Theclinae	yes															25	25	25.0	aposematic
+Pellicia	arina	Hesperiidae	Pyrginae	yes	natural	G4							cryptic	no				nectar	25	38	31.5	cryptic
+Phaeostrymon	alcestis	Lycaenidae	Theclinae	yes	natural	G5	eggs					singly				April-July (south not specified)	April-July (north not specified)	nectar	25	38	31.5	aposematic
+Philotes	sonorensis	Lycaenidae	Polyommatinae	yes	natural	G3	chrysalis	1	1	1	1	singly	cryptic	yes		February-March (south not specified)	February-March (north not specified)		22	25	23.5	aposematic
+Phocides	pigmalion	Hesperiidae	Pyrginae	yes	natural	G4						singly	cryptic	no		November-August in southern Florida	November-August in southern Florida	nectar	48	70	59.0	cryptic
+Phocides	polybius	Hesperiidae	Pyrginae	yes	both	G5						singly	aposematic	no		February, April, and June-December in South Texas	February, April, and June-December in South Texas	nectar	42	63	52.5	aposematic
+Phocides	urania	Hesperiidae	Pyrginae	yes															51	62	56.5	aposematic
+Phoebis	agarithe	Pieridae	Coliadinae	yes	both	G5							cryptic	no		All year in south Texas and south Florida,	All year in south Texas and south Florida,	nectar	57	86	71.5	aposematic
+Phoebis	neleis	Pieridae	Coliadinae	yes	both								cryptic	no		most of year	most of year	nectar	60	80	70.0	cryptic
+Phoebis	philea	Pieridae	Coliadinae	yes	both	G5						singly	aposematic	yes				nectar	70	102	86.0	aposematic
+Phoebis	sennae	Pieridae	Coliadinae	yes	both	G5						singly	aposematic	yes			August or September	nectar	57	80	68.5	cryptic
+Phoebis	statira	Pieridae	Coliadinae	yes	natural	G5						singly	cryptic	no				nectar	60	80	70.0	cryptic
+Pholisora	catullus	Hesperiidae	Pyrginae	yes	both	G5	larva			2	2	singly	cryptic	no		March-November	May-August	nectar	25	33	29.0	cryptic
+Pholisora	mejicana	Hesperiidae	Pyrginae	yes	natural	G5	larva	2	2	2	2	singly				May-August (south not specified)	May-August (north not specified)	nectar	24	30	27.0	cryptic
+Phyciodes	ardys	Nymphalidae	Nymphalinae	yes																		aposematic
+Phyciodes	argentea	Nymphalidae	Nymphalinae	yes																		aposematic
+Phyciodes	batesii	Nymphalidae	Nymphalinae	yes	both	G5	larva	1	1	1	1	clutches				May-July (south not specified)	May-July (north not specified)	nectar	32	45	38.5	aposematic
+Phyciodes	campestris	Nymphalidae	Nymphalinae	yes	both	G5	larva					clutches	cryptic	yes		April-October	 June-August	nectar	25	45	35.0	aposematic
+Phyciodes	frisia	Nymphalidae	Nymphalinae	yes	both	G4					3	clutches	cryptic	yes				nectar	32	45	38.5	aposematic
+Phyciodes	mylitta	Nymphalidae	Nymphalinae	yes	both	G5					2	clutches	cryptic	yes		feb-nov	april-sep	nectar	30	38	34.0	aposematic
+Phyciodes	orseis	Nymphalidae	Nymphalinae	yes	natural	G3					1	clutches	cryptic	yes		may-june	may-june	nectar	32	42	37.0	aposematic
+Phyciodes	pallida	Nymphalidae	Nymphalinae	yes	natural	G5					1	clutches				april-june	april-june	nectar	35	41	38.0	aposematic
+Phyciodes	phaon	Nymphalidae	Nymphalinae	yes	natural 	G5							cryptic	yes		april-sep	feb-oct	nectar	25	38	31.5	aposematic
+Phyciodes	picta	Nymphalidae	Nymphalinae	yes	both	G5					3	clutches	cryptic	yes		april-oct	april-oct	nectar	25	38	31.5	cryptic
+Phyciodes	selenis	Nymphalidae	Nymphalinae	yes	both	G5	larvae				2	clutches				june-july	june-july	nectar	32	48	40.0	aposematic
+Phyciodes	texana	Nymphalidae	Nymphalinae	yes	both	G5						clutches	cryptic	yes		march-nov	march-nov	nectar	32	48	40.0	cryptic
+Phyciodes	tharos	Nymphalidae	Nymphalinae	yes	both	G5	larvae				3		cryptic	yes		"thorughout the year"	april-nov	nectar	32	45	38.5	aposematic
+Phyciodes	tulcis	Nymphalidae	Nymphalinae																32	35	33.5	aposematic
+Phyciodes	vesta	Nymphalidae	Nymphalinae	yes	natural	G5										all year	april-nov	nectar	22	38	30.0	aposematic  
+Pieris	napi	Pieridae	Pierinae	yes		G5			2		1	singly	cryptic	yes		april-sep	june-july	nectar	38	57	47.5	aposematic 
+Pieris	rapae	Pieridae	Pierinae	no	both	G5	chrysalis	7	8	2	3	singly	cryptic	yes				nectar	45	58	51.5	aposematic 
+Pieris	virginiensis	Pieridae	Pierinae	yes	natural 	G3	chrysalis		1		1	singly	cryptic	yes		april-may	may	nectar	45	53	49.0	aposematic 
+Piruna	ajijiciensis	Hesperiidae	Hesperiinae																20	20	20.0	cryptic
+Piruna	cingo	Hesperiidae	Hesperiinae	yes	natural	G4					1					aug-sep	aug-sep	nectar				cryptic
+Piruna	microstictus	Hesperiidae	Hesperiinae	yes		G3					1					june-aug	oct	nectar	22	25	23.5	cryptic
+Piruna	penaea	Hesperiidae	Hesperiinae	yes	natural	G4										all year		nectar	21	21	21.0	cryptic
+Piruna	pirus	Hesperiidae	Hesperiinae	yes	natural	G5	larva				1		cryptic	yes		june-july	june-july	nectar	25	29	27.0	cryptic
+Piruna	polingi	Hesperiidae	Hesperiinae	yes	natural	G4					1					june-aug	june-aug	nectar	25	39	32.0	cryptic
+Plebejus	acmon	Lycaenidae	Polyommatinae	yes	natural	G5					1	singly	aposematic	yes		march-oct	march-oct	nectar	20	29	24.5	aposematic
+Plebejus	emigdionis	Lycaenidae	Polyommatinae	yes	natural	G1					3	singly	aposematic	yes		april-sep	april-sep		22	29	25.5	aposematic 
+Plebejus	icarioides	Lycaenidae	Polyommatinae	yes	natural	G5					2		aposematic 	yes		april-aug	april-aug	nectar	29	35	32.0	aposematic
+Plebejus	lupini	Lycaenidae	Polyommatinae	yes	natural	G5						singly	cryptic	yes		june-aug	march-july	nectar	22	29	25.5	aposematic
+Plebejus	neurona	Lycaenidae	Polyommatinae	yes	natural	G2					2	singly				may-aug	may-aug	nectar	20	22	21.0	cryptic
+Plebejus	saepiolus	Lycaenidae	Polyommatinae	yes	both	G5					1	singly	cryptic	yes		may-july	may-july	nectar	25	32	28.5	aposematic 
+Plebejus	shasta	Lycaenidae	Polyommatinae	yes	natural	G5					1	singly				june-aug	june-aug	nectar	22	30	26.0	cryptic
+Poanes	aaroni	Hesperiidae	Hesperiinae	yes		G4					2		cryptic	yes		april-oct	may-sep	nectar	33	43	38.0	cryptic
+Poanes	hobomok	Hesperiidae	Hesperiinae	yes	both	G5					1	singly				april-july	april-july	nectar	25	43	34.0	cryptic
+Poanes	massasoit	Hesperiidae	Hesperiinae	yes	natural	G5					1					june-aug	june-aug	nectar	29	37	33.0	cryptic
+Poanes	melane	Hesperiidae	Hesperiinae	yes	both	G5					2		cryptic	yes		march-may, sep-oct	march-may, sep-oct	nectar	32	35	33.5	cryptic
+Poanes	taxiles	Hesperiidae	Hesperiinae	yes	natural	G5					1	singly	cryptic	no		june-aug	june-aug	nectar	32	43	37.5	cryptic
+Poanes	viator	Hesperiidae	Hesperiinae	yes	natural	G5						singly	aposematic 	yes		june-aug, july-aug, may-aug	june-aug, july-aug, may-aug	nectar	32	57	44.5	cryptic
+Poanes	yehl	Hesperiidae	Hesperiinae	yes	natural	G4					2					may-june, aug-nov	may-june, aug-nov	nectar	34	45	39.5	cryptic
+Poanes	zabulon	Hesperiidae	Hesperiinae	yes	both	G5					2	singly	cryptic	yes			may-sep	nectar	35	42	38.5	cryptic
+Poladryas	arachne	Nymphalidae	Nymphalinae	yes		G5						clutches	aposematic	yes		may-sep	may-sep	nectar	32	45	38.5	aposematic
+Polites	baracoa	Hesperiidae	Hesperiinae	yes	both	G4							cryptic	yes		march-nov	march-nov	nectar	22	29	25.5	cryptic
+Polites	carus	Hesperiidae	Hesperiinae	yes	natural	G4			3							march-sep	march-sep	nectar	25	32	28.5	cryptic
+Polites	draco	Hesperiidae	Hesperiinae	yes	natural	G5					1		cryptic	yes		june-aug	june-aug	nectar	25	32	28.5	cryptic
+Polites	mardon	Hesperiidae	Hesperiinae	yes	natural	G2 	chrysalis				1					may-july	may-july	nectar	22	25	23.5	cryptic
+Polites	mystic	Hesperiidae	Hesperiinae	yes	both	G5					1	singly				may-aug	may-aug	nectar	29	38	33.5	cryptic
+Polites	origenes	Hesperiidae	Hesperiinae	yes	both	G4	larva		2		1					may-sep	june-aug	nectar	29	38	33.5	cryptic
+Polites	peckius	Hesperiidae	Hesperiinae	yes	both	G5	chrysalis				3	singly				may-oct	may-oct	nectar	25	32	28.5	cryptic
+Polites	rhesus	Hesperiidae	Hesperiinae	yes	natural	G4					1	singly				may-june 	may-june 	nectar	25	32	28.5	cryptic
+Polites	sabuleti	Hesperiidae	Hesperiinae	yes	both	G5					1	singly	cryptic	yes		march-oct	june-aug	nectar	22	32	27.0	cryptic
+Polites	sonora	Hesperiidae	Hesperiinae	yes	natural	G4					1		cryptic	no			june-aug	nectar	25	32	28.5	aposematic
+Polites	themistocles	Hesperiidae	Hesperiinae	yes	both	G5		2			2	singly				april-sep	june-july	nectar	22	36	29.0	cryptic
+Polites	vibex	Hesperiidae	Hesperiinae	yes	both	G5					2		cryptic	yes		all year	april-sep	nectar	25	39	32.0	aposematic
+Polyctor	enops	Hesperiidae	Pyrginae										cryptic	yes								cryptic
+Polygonia	comma	Nymphalidae	Nymphalinae																45	64	54.5	aposematic
+Polygonia	faunus	Nymphalidae	Nymphalinae																45	64	54.5	aposematic
+Polygonia	gracilis	Nymphalidae	Nymphalinae	yes	natural	G5	adult				1					july-sep	july-sep	nectar, sap	39	57	48.0	aposematic
+Polygonia	interrogationis	Nymphalidae	Nymphalinae																57	76	66.5	aposematic
+Polygonia	oreas	Nymphalidae	Nymphalinae	yes	natural	G5	adult				1	singly	cryptic	yes		june-oct	june-oct	sap and rotting fruit	42	48	45.0	cryptic
+Polygonia	progne	Nymphalidae	Nymphalinae	yes	natural	G5					2	singly	cryptic	yes		june-aug	june-aug	sap  	44	63	53.5	cryptic
+Polygonia	satyrus	Nymphalidae	Nymphalinae																45	64	54.5	aposematic
+Polygonus	leo	Hesperiidae	Hesperiinae	yes		G5							cryptic	no		may-sep	may-sep	nectar	43	59	51.0	cryptic
+Pompeius	verna	Hesperiidae	Hesperiinae	yes	both	G5			2		1		cryptic	no		april-sep	june-aug	nectar	27	39	33.0	cryptic
+Pontia	beckerii	Pieridae	Pierinae	yes	natural	G5						singly	aposematic	yes		march-oct	march-oct	nectar	40	50	45.0	aposematic
+Pontia	occidentalis	Pieridae	Pierinae	yes	both	G5			2		1	singly	aposematic	yes		may-aug	june-july	nectar	38	53	45.5	aposematic 
+Pontia	protodice	Pieridae	Pierinae	yes	both	G5			4		3	singly	aposematic	yes		march-nov	march-nov	nectar	38	63	50.5	aposematic 
+Pontia	sisymbrii	Pieridae	Pierinae	yes	both	G5					1	singly	aposematic	yes		feb-july	feb-july		30	45	37.5	aposematic 
+Problema	bulenta	Hesperiidae	Hesperiinae	yes		G3				1	2					july-sep	july-sep	nectar	39	54	46.5	cryptic
+Problema	byssus	Hesperiidae	Hesperiinae	yes	natural	G4			1		1	singly	cryptic	yes		april-oct	june-july	nectar	37	46	41.5	cryptic
+Proteides	mercurius	Hesperiidae	Pyrginae	yes		G5							cryptic	yes		april-oct	april-may	nectar	58	70	64.0	cryptic
+Pseudocopaeodes	eunus	Hesperiidae	Hesperiinae	yes	natural	G3							cryptic	no		april-sep	april-sep	nectar	25	32	28.5	cryptic
+Pyrgus	albescens	Hesperiidae	Pyrginae	yes	both	G5							cryptic	yes		all year	all year	nectar	25	38	31.5	cryptic
+Pyrgus	centaureae	Hesperiidae	Pyrginae	yes	natural	G5			1			singly	cryptic	yes		march-may		nectar	25	33	29.0	cryptic
+Pyrgus	communis	Hesperiidae	Pyrginae	yes	both	G5						singly	cryptic	yes		feb-oct	march-sep	nectar	25	38	31.5	cryptic
+Pyrgus	oileus	Hesperiidae	Pyrginae	yes	both	G5					5	singly	cryptic	yes				nectar	32	38	35.0	cryptic
+Pyrgus	philetas	Hesperiidae	Pyrginae	yes	both	G5					3					feb-dec	april-oct	nectar	25	29	27.0	cryptic
+Pyrgus	ruralis	Hesperiidae	Pyrginae	yes	natural	G5					1	singly	cryptic	yes		april-july	april-july	nectar	25	29	27.0	cryptic
+Pyrgus	scriptura	Hesperiidae	Pyrginae	yes	both	G5					1	singly	cryptic	yes		march-nov	july-aug	nectar	20	25	22.5	cryptic
+Pyrgus	xanthus	Hesperiidae	Pyrginae	yes	natural	G3					1	singly	cryptic	yes		april-june	april-june	nectar	20	25	22.5	cryptic
+Pyrisitia	dina	Pieridae	Coliadinae	yes	both	G5		1		1		clutches	cryptic	yes		throughout the year in southern Flordia	November (South Texas), October (southern Arizona)	nectar	32	57	44.5	aposematic
+Pyrisitia	nise	Pieridae	Coliadinae	yes	both	G5		1		1		singly	cryptic	yes		all year in the tropics, May - August in southern Flordia	September - November in southern Texas	nectar	29	51	40.0	aposematic
+Pyrisitia	proterpia	Pieridae	Coliadinae	yes	both	G5		1		1			cryptic	yes		throughout the year in the tropics	August - November in Texas	nectar	45	57	51.0	aposematic
+Pyrrhopyge	araxes	Hesperiidae	Pyrrhopyginae	yes	natural	G5							cryptic	yes		june-nov	june-nov	nectar	45	57	51.0	cryptic
+Quasimellana	eulogius	Hesperiidae	Hesperiinae	yes		G5										april-nov	all year	nectar	27	32	29.5	cryptic
+Rekoa	marius	Lycaenidae	Theclinae	yes		G5							aposematic	yes		all year	sep-dec	nectar	22	32	27.0	aposematic 
+Remella	remus	Hesperiidae	Hesperiinae	yes															25	25	25.0	cryptic
+Remella	rita	Hesperiidae	Hesperiinae	yes															26	26	26	aposematic
+Rhinthon	osca	Hesperiidae	Hesperiinae	yes		G5							cryptic	yes		may-jan	october	nectar	35	42	38.5	cryptic
+Satyrium	acadica	Lycaenidae	Theclinae	yes	both	G5					1		cryptic	yes		june-aug	june-aug	nectar	29	38	33.5	aposematic 
+Satyrium	auretorum	Lycaenidae	Theclinae	yes	natural	G4					1	singly				may-july	may-july	nectar	25	32	28.5	cryptic
+Satyrium	behrii	Lycaenidae	Theclinae	yes	natural	G5					1	singly	cryptic	yes		june-july	june-july	nectar	25	32	28.5	cryptic
+Satyrium	calanus	Lycaenidae	Theclinae	yes	natural	G5					1		cryptic	yes		april-may	june-august	nectar	25	38	31.5	aposematic  
+Satyrium	californica	Lycaenidae	Theclinae	yes	natural	G5					1	clutches				may-aug	may-aug	nectar	25	32	28.5	aposematic  
+Satyrium	caryaevorum	Lycaenidae	Theclinae	yes	natural	G4					1					june-aug	june-aug	nectar	29	35	32.0	cryptic
+Satyrium	edwardsii	Lycaenidae	Theclinae	yes	natural	G4			1		1		cryptic	yes		may-july	june-july	nectar	30	38	34.0	aposematic
+Satyrium	favonius	Lycaenidae	Theclinae	yes	natural	G4					1	singly	cryptic	yes		march-june	march-june	nectar	22	38	30.0	aposematic
+Satyrium	fuliginosa	Lycaenidae	Theclinae	yes	natural	G4					1	singly	cryptic	yes		july-aug	july-aug	nectar	25	32	28.5	cryptic
+Satyrium	kingi	Lycaenidae	Theclinae	yes	natural	G3					1	singly	cryptic	yes		may-july	may-july	nectar	30	38	34.0	aposematic
+Satyrium	liparops	Lycaenidae	Theclinae																25	39	32	aposematic
+Satyrium	polingi	Lycaenidae	Theclinae	yes		T1					2	singly				may-june, aug-sep	may-june, aug-sep	nectar	25	30	27.5	aposematic
+Satyrium	saepium	Lycaenidae	Theclinae	yes	natural	G5					1	singly	cryptic	yes		april-sep	april-sep	nectar	25	32	28.5	aposematic
+Satyrium	sylvinus	Lycaenidae	Theclinae	yes	natural	G5					1	singly				may-aug	may-aug	nectar	25	35	30.0	aposematic
+Satyrium	tetra	Lycaenidae	Theclinae	yes	natural	G5					1	both	cryptic	yes		june-july	june-july	nectar	25	32	28.5	cryptic
+Satyrium	titus	Lycaenidae	Theclinae	yes	natural	G5					1	singly	aposematic	yes		may-aug	may-aug	nectar	25	38	31.5	aposematic
+Satyrodes	appalachia	Nymphalidae	Satyrinae	yes		G5			2		1	singly	cryptic	yes		june-oct	july-sep	sap	48	57	52.5	cryptic
+Satyrodes	eurydice	Nymphalidae	Satyrinae	yes		G3							cryptic	yes		june-sep	june-sep	sap	38	62	50.0	cryptic
+Siproeta	stelenes	Nymphalidae	Nymphalinae	yes	both	G5					4	singly	cryptic	yes				nectar, fruit	83	101	92.0	aposematic
+Sostrata	bifasciata	Hesperiidae	Pyrginae	yes		G5			1		1		cryptic	yes		april-oct	october	nectar	24	30	27.0	cryptic
+Spathilepia	clonius	Hesperiidae	Pyrginae	yes		G5										all year	may-july, october-november	nectar	42	46	44.0	cryptic
+Speyeria	adiaste	Nymphalidae	Heliconiinae	yes	natural	G1					1	singly				june-july	june-july	nectar	50	61	55.5	cryptic
+Speyeria	aphrodite	Nymphalidae	Heliconiinae	yes	both	G5					1	singly	cryptic	yes		june-sep	june-sep	nectar	63	83	73.0	aposematic
+Speyeria	atlantis	Nymphalidae	Heliconiinae	yes	natural	G5					1	singly	cryptic	yes		june-sep	june-sep	nectar	50	70	60.0	aposematic
+Speyeria	callippe	Nymphalidae	Heliconiinae	yes	natural	G5					1	singly				may-aug	may-aug		50	64	57.0	cryptic
+Speyeria	coronis	Nymphalidae	Heliconiinae	yes	natural	G5					1	singly	cryptic	yes		june-sep	june-sep	nectar	50	86	68.0	aposematic
+Speyeria	cybele	Nymphalidae	Heliconiinae	yes	both	G5					1		aposematic	yes		june-sep	june-sep	nectar	63	101	82.0	aposematic
+Speyeria	diana	Nymphalidae	Heliconiinae	yes	natural	G3					1	singly	aposematic	yes		june-sep	june-sep	nectar, dung	87	113	100.0	aposematic
+Speyeria	edwardsii	Nymphalidae	Heliconiinae	yes	natural	G5					1					june-sep	june-sep	nectar	63	86	74.5	aposematic
+Speyeria	egleis	Nymphalidae	Heliconiinae	yes	natural	G5					1					june-aug	june-aug	nectar	45	60	52.5	cryptic
+Speyeria	hydaspe	Nymphalidae	Heliconiinae	yes	natural	G5					1					june-sep	june-sep	nectar	50	64	57.0	cryptic
+Speyeria	idalia	Nymphalidae	Heliconiinae	yes	both	G3					1	singly	aposematic	yes		june-aug	june-aug	nectar	67	105	86.0	aposematic
+Speyeria	mormonia	Nymphalidae	Heliconiinae	yes	natural	G5					1	singly				june-sep	june-sep	nectar	38	61	49.5	cryptic
+Speyeria	nokomis	Nymphalidae	Heliconiinae	yes	natural	G3					1	singly	cryptic	yes		july-sep	july-sep	nectar	63	79	71.0	cryptic
+Speyeria	zerene	Nymphalidae	Heliconiinae	yes	natural	G5					1	singly				june-sep	june-sep		54	70	62.0	cryptic
+Staphylus	ceos	Hesperiidae	Pyrginae	yes	natural	G4							cryptic	yes		april-dec	april-sep		24	29	26.5	cryptic
+Staphylus	hayhurstii	Hesperiidae	Pyrginae	yes	both	G5					2	singly	cryptic	yes		april-sep	may-aug	nectar	25	32	28.5	cryptic
+Staphylus	mazans	Hesperiidae	Pyrginae	yes	both	G5													25	30	27.5	cryptic
+Staphylus	tierra	Hesperiidae	Pyrginae	yes															30	30	30	cryptic
+Stinga	morrisoni	Hesperiidae	Hesperiinae	yes	natural	G4					1					april-may, september	may- july	nectar	25	29	27.0	cryptic
+Strymon	acis	Lycaenidae	Theclinae	yes	natural	T1					4	singly				feb-nov	feb-nov	nectar	22	29	25.5	aposematic
+Strymon	albata	Lycaenidae	Theclinae	yes		G5					2					june-dec	all year	nectar	29	35	32.0	cryptic
+Strymon	alea	Lycaenidae	Theclinae	yes	natural	GU					4					april-dec	april-dec	nectar	19	29	24.0	cryptic
+Strymon	bazochii	Lycaenidae	Theclinae	yes	natural	G5					3	singly				may-dec	may-dec	nectar	22	25	23.5	cryptic
+Strymon	istapa	Lycaenidae	Theclinae	yes	natural	G5							cryptic	yes		all year	all year	nectar	22	32	27.0	aposematic
+Strymon	martialis	Lycaenidae	Theclinae	yes	natural	G4										feb-dec	feb-dec	nectar	28	35	31.5	aposematic
+Strymon	melinus	Lycaenidae	Theclinae	yes	both	G5		3	4		2	singly	cryptic	yes		feb-nov	may-sep	nectar	22	35	28.5	aposematic
+Strymon	rufofusca	Lycaenidae	Theclinae	yes		G5						singly				july, oct-dec	all year	nectar	25	29	27.0	aposematic
+Systasea	pulverulenta	Hesperiidae	Pyrginae	yes	both	G5						singly	cryptic	yes		feb-dec	feb-dec	nectar	24	35	29.5	cryptic
+Systasea	zampa	Hesperiidae	Pyrginae	yes	natural	G5							cryptic	yes		april-oct	april-oct	nectar	25	38	31.5	cryptic
+Texola	elada	Nymphalidae	Nymphalinae	yes	natural	G5						clutches	aposematic	yes		april-oct	april-oct	nectar	22	32	27.0	aposematic
+Thorybes	bathyllus	Hesperiidae	Pyrginae	yes	both	G5		2	3		1	singly	cryptic	yes		june-july	june-october	nectar	33	50	41.5	cryptic
+Thorybes	confusis	Hesperiidae	Pyrginae	yes	natural	G4					2					april-aug	april-aug	nectar	38	48	43.0	cryptic
+Thorybes	diversus	Hesperiidae	Pyrginae	yes	natural	G3					1	singly	cryptic	yes		june-july	june-july	nectar	32	38	35.0	cryptic
+Thorybes	drusius	Hesperiidae	Pyrginae	yes	natural	G4							cryptic	yes		april-aug	april-aug	nectar	38	45	41.5	cryptic
+Thorybes	mexicanus	Hesperiidae	Pyrginae	yes	natural	G5					1	singly				june-aug	june-aug	nectar	29	35	32.0	cryptic
+Thorybes	pylades	Hesperiidae	Pyrginae	yes	both	G5			2		1	singly	cryptic	yes		march-sep	may-july	nectar	32	47	39.5	cryptic
+Thymelicus	lineola	Hesperiidae	Hesperiinae	no	both	G5					1	clutches	cryptic	yes		may-july	may-july	nectar	25	29	27.0	cryptic
+Timochares	ruptifasciatus	Hesperiidae	Pyrginae	yes	both	G5							cryptic	yes		march-nov	march-nov	nectar	38	43	40.5	cryptic
+Tmolus	echion	Lycaenidae	Theclinae	yes	both	G5						singly				all year	may	nectar	22	32	27.0	aposematic
+Urbanus	belli	Hesperiidae	Pyrginae	yes															37	40	38.5	aposematic
+Urbanus	dorantes	Hesperiidae	Pyrginae	yes	both	G5					4							nectar	37	51	44.0	cryptic
+Urbanus	doryssus	Hesperiidae	Pyrginae	yes		G5										all year	march-nov		30	48	39.0	cryptic
+Urbanus	procne	Hesperiidae	Pyrginae	yes	natural	G5					3								37	48	42.5	cryptic
+Urbanus	proteus	Hesperiidae	Pyrginae	yes	both	G5					3	clutches	cryptic	no				nectar	45	60	52.5	aposematic
+Urbanus	simplicius	Hesperiidae	Pyrginae	yes		G5										oct-july	april	nectar	38	50	44.0	cryptic
+Urbanus	teleus	Hesperiidae	Hesperiinae	yes	natural	G5												nectar	35	39	37.0	cryptic
+Vacciniina	optilete	Lycaenidae	Polyommatinae	yes	natural	G5													18	24	21	aposematic
+Vaga	blackburni	Lycaenidae	Polyommatinae	yes	natural	G4													22	29	25.5	aposematic
+Vanessa	annabella	Nymphalidae	Nymphalinae	yes	both	G5						singly	cryptic	yes				nectar	38	57	47.5	aposematic
+Vanessa	atalanta	Nymphalidae	Nymphalinae	yes	both	G5					2	singly	cryptic	yes		oct-march	march-oct	sap, nectar, fruit	45	76	60.5	aposematic
+Vanessa	cardui	Nymphalidae	Nymphalinae		both														51	73	62	aposematic
+Vanessa	tameneamea	Nymphalidae	Nymphalinae	yes	natural	G3						singly	cryptic	yes				sap 	63.5	63.5	63.5	aposematic
+Vanessa	virginiensis	Nymphalidae	Nymphalinae	yes	both	G5					4	singly	cryptic	yes		may-nov	may-nov	nectar	45	67	56.0	aposematic
+Vidius	perigenes	Hesperiidae	Hesperiinae	yes	natural	G5					2					feb-dec	march-dec	nectar	22	29	25.5	cryptic
+Wallengrenia	egeremet	Hesperiidae	Hesperiinae	yes	both	G5	larva				2					may-oct	june-aug	nectar	25	39	32.0	cryptic
+Wallengrenia	otho	Hesperiidae	Hesperiinae	yes	natural	G4					2	singly				april-oct	april-oct	nectar	24	35	29.5	cryptic
+Xenophanes	tryxus	Hesperiidae	Pyrginae	yes		G5					3					feb-dec	feb-dec	nectar	29	33	31.0	cryptic
+Zera	hyacinthinus	Hesperiidae	Pyrginae	yes															29	33	31	cryptic
+Zerene	cesonia	Pieridae	Coliadinae	yes	both	G5	adult	1	3	1		singly	aposematic			May - September		nectar	54	76	65.0	aposematic 
+Zerene	eurydice	Pieridae	Coliadinae	yes	both	G4	adult	2				clutches	cryptic	yes		April - August		nectar	51	63	57.0	aposematic
+Zestusa	dorus	Hesperiidae	Pyrginae	yes	natural 	G4			2		1		cryptic	no		april-july	may-june	sap, spittlebug secretions 	35	42	38.5	cryptic
+Zizula	cyna	Lycaenidae	Polyommatinae	yes	natural 	G4									yes	march-nov	march-nov	nectar	16	22	19.0	cryptic
