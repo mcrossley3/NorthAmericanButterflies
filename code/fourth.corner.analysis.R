@@ -1,14 +1,14 @@
 
-setwd('<your/working/directory>')
+# Note: fourth corner step took > 900 Gb of memory
 
 library(mvabund)
 library(lattice)
 
-data1 = read.table('./data/butterfly_traits_envars_trends_50km_wNAs_trim_forModelling.txt',sep='\t',as.is=T,check.names=F,header=T)
+data1 = read.table('./data/butterfly_traits_envars_trends_50km_NoMergeJunAug_m5_trim_2traits.txt',sep='\t',as.is=T,check.names=F,header=T)
 gids = sort(unique(data1$grid_id))
 species = sort(unique(data1$Species))
 traits = c('AdultSize','Diet.breadth.families')
-envars = c('Cropland.2015','Cropland.diff','Built.2015','Built.diff','Precip.2018','Precip.diff','Temp.2018','Temp.diff')
+envars = c('Cropland.2005_2015','Cropland.trend','Built.2005_2015','Precip.1993_2018','Precip.trend','Temp.1993_2018','Temp.trend')
 
 # R matrix: rows=sites, columns=envars
 R.mat = matrix(NA,nrow=length(gids),ncol=length(envars))

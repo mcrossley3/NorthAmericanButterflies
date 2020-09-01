@@ -1,6 +1,5 @@
 
 
-setwd('your/working/directory')
 
 library(rgdal)
 library(sp)
@@ -78,9 +77,9 @@ calc.evenness = function(sp1,ab1){
 # 50km scale (no pseudo-absences)
 
 # Import butterfly data
-butterfly_counts1 = read.table('./data/butterfly_data_gridded_50km_1993-2018_wNAs.txt',sep='\t',as.is=T,check.names=F,header=T)
-butterfly_circles = spTransform(readOGR(dsn='./shapefiles/butterfly_sites_50km.shp',layer='butterfly_sites_50km',verbose=F,stringsAsFactors=F),CRS(proj1)) #shapefile with butterfly count circles
-butterfly_grid = readOGR(dsn='./shapefiles/butterfly_grid_50km.shp',layer='butterfly_grid_50km',verbose=F,stringsAsFactors=F) #shapefile with grid
+butterfly_counts1 = read.table('./data/butterfly_data_gridded_50km_noMergeJunAug_m5.txt',sep='\t',as.is=T,check.names=F,header=T)
+butterfly_circles = spTransform(readOGR(dsn='./shapefiles/butterfly_sites_50km_NoMergeJunAug_m5.shp',layer='butterfly_sites_50km_NoMergeJunAug_m5',verbose=F,stringsAsFactors=F),CRS(proj1)) #shapefile with butterfly count circles
+butterfly_grid = readOGR(dsn='./shapefiles/butterfly_grid_50km_NoMergeJunAug_m5.shp',layer='butterfly_grid_50km_NoMergeJunAug_m5',verbose=F,stringsAsFactors=F) #shapefile with grid
 grid50 <- as(butterfly_grid, "sf")
 g50 <- inla.read.graph('./shapefiles/nb50.graph') #graph network of grid neighbors
 eco1 = spTransform(readOGR(dsn='./shapefiles/na_cec_eco_l1/NA_CEC_Eco_Level1.shp',layer='NA_CEC_Eco_Level1',verbose=F,stringsAsFactors=F),CRS(proj1)) #ecoregion shapefiles - used for mapping later
@@ -111,7 +110,7 @@ for (s in 1:length(sites)){
 		butterfly_counts = data.frame(rbind(butterfly_counts,add.dat),stringsAsFactors=F)
 	}
 }
-write.table(butterfly_counts,'butterfly_total_abundance_50km_wNAs.txt',sep='\t',row.names=F)
+write.table(butterfly_counts,'butterfly_total_abundance_50km_noMergeJunAug_m5.txt',sep='\t',row.names=F)
 
 
 # INLA model
@@ -207,7 +206,7 @@ pit2 <- ggplot(data=pit1, aes(x=PIT)) +
   xlab("Probability integral transform (PIT)") +
   ylab("Count"); pit2; summary(pit1$PIT)
 #	ggsave(paste0(species[i],'_pit.png'),plot=pit2,device='png',path='./plots/PIT/',width=8,height=8,units="in",dpi=300)
-ggsave('Allspecies_pit_1993-2018_50km_wNAs.png',plot=pit2,device='png',path='./plots/PIT/',width=8,height=8,units="in",dpi=300)
+ggsave('Allspecies_pit_1993-2018_50km_noMergeJunAug_m5.png',plot=pit2,device='png',path='./plots/PIT/',width=8,height=8,units="in",dpi=300)
 
 # collect posterior summaries into one dataframe
 grid_key <- unique(sp_counts[, c("grid_id", "EcoI", "EcoII")])	
@@ -222,7 +221,7 @@ sm2[3,] = trimws(gsub('Median :','',sm2[3,]),which='both')
 
 # Make cell level maps
 results_cells <- merge(butterfly_grid, post_sum, by="grid_id", all=F)
-write.table(results_cells@data,'Allspecies_trends_1993-2018_50km_wNAs.txt',sep='\t',quote=F,row.names=F) # Write model output to file
+write.table(results_cells@data,'./inla_model_output/50km_wNAs_noMerge/Allspecies_trends_1993-2018_50km_noMergeJunAug_m5.txt',sep='\t',quote=F,row.names=F) # Write model output to file
 res_sf <- as(results_cells, "sf")
 
 # grid
@@ -285,44 +284,32 @@ alph_p1 <- ggplot() +
 
 # print cell maps
 print(noquote('---drawing maps---'))
-ggsave('Allspecies_effort_1993-2018_50km_wNAs.png',plot =eps_p1,device='png',path='./',width=8,height=8,units="in",dpi=300)
-ggsave('Allspecies_change_per_year_1993-2018_50km_wNAs.png',plot =tau_p1,device='png',path='./',width=8,height=8,units="in",dpi=300)
-ggsave('Allspecies_relative_abundance_1993-2018_50km_wNAs.png',plot =alph_p1,device='png',path='./',width=8,height=8,units="in",dpi=300)
+##	ggsave(paste0(species[i],'_circles.png'),plot =grid_p1,device='png',path='./plots/model_maps/',width=8,height=8,units="in",dpi=300)
+##	ggsave(paste0(species[i],'_change_per_year_interval.png'),plot =tau_p2,device='png',path='./plots/model_maps/',width=8,height=8,units="in",dpi=300)
+##	ggsave(paste0(species[i],'_change_per_year_significant.png'),plot =tau_p3,device='png',path='./plots/model_maps/',width=8,height=8,units="in",dpi=300)
+ggsave('Allspecies_effort_1993-2018_50km_noMergeJunAug_m5.png',plot =eps_p1,device='png',path='./plots/model_maps/50km_wNAs_noMerge/',width=8,height=8,units="in",dpi=300)
+ggsave('Allspecies_change_per_year_1993-2018_50km_noMergeJunAug_m5.png',plot =tau_p1,device='png',path='./plots/model_maps/50km_wNAs_noMerge/',width=8,height=8,units="in",dpi=300)
+ggsave('Allspecies_relative_abundance_1993-2018_50km_noMergeJunAug_m5.png',plot =alph_p1,device='png',path='./plots/model_maps/50km_wNAs_noMerge/',width=8,height=8,units="in",dpi=300)
 
-res_sf = read.table('Allspecies_trends_1993-2018_50km_wNAs.txt',sep='\t',as.is=T,check.names=F,header=T)
-par(oma=c(0,0,0,0),mar=c(0,5,0,0))
-boxplot(res_sf$tau,ylab='Total abundance trend',ylim=c(-10,10),cex.lab=2,boxlwd=2,staplelwd=2,whisklwd=2,whisklty=1,col='grey40',outpch=16,frame=F,yaxt='n')
-axis(2,lwd=3,at=seq(-10,10,2),cex.axis=1.5)
-abline(a=0,b=0,lwd=2,col='red',lty=2)
-legend('topright',legend=c('No. sites = 497','No. cells = 414'),bty='n',cex=2,ncol=1)
-
-dev.off()
-hist(res_sf$tau,main='',ylim=c(0,200),breaks=seq(-12,6,2),ylab='No. species',xlab='Median total abundance trend',cex.lab=1.5,cex.axis=1.2)
-abline(v=0,lwd=2,col='red')
+res_sf = read.table('./inla_model_output/50km_wNAs_noMerge/Allspecies_trends_1993-2018_50km_noMergeJunAug_m5.txt',sep='\t',as.is=T,check.names=F,header=T)
+quantile(res_sf$tau) #median=-0.717
 
 
 ############################
 # Repeat INLA for total abundance (no pseudoabsences),
-# but this time excluding the four most abundant species
+# excluding Thymelicus lineola and Pieris rapae
 
 # Import butterfly data
-butterfly_counts1 = read.table('./data/butterfly_data_gridded_50km_1993-2018_wNAs.txt',sep='\t',as.is=T,check.names=F,header=T)
-butterfly_circles = spTransform(readOGR(dsn='./shapefiles/butterfly_sites_50km.shp',layer='butterfly_sites_50km',verbose=F,stringsAsFactors=F),CRS(proj1)) #shapefile with butterfly count circles
-butterfly_grid = readOGR(dsn='./shapefiles/butterfly_grid_50km.shp',layer='butterfly_grid_50km',verbose=F,stringsAsFactors=F) #shapefile with grid
+butterfly_counts1 = read.table('./data/butterfly_data_gridded_50km_noMergeJunAug_m5.txt',sep='\t',as.is=T,check.names=F,header=T)
+butterfly_circles = spTransform(readOGR(dsn='./shapefiles/butterfly_sites_50km_NoMergeJunAug_m5.shp',layer='butterfly_sites_50km_NoMergeJunAug_m5',verbose=F,stringsAsFactors=F),CRS(proj1)) #shapefile with butterfly count circles
+butterfly_grid = readOGR(dsn='./shapefiles/butterfly_grid_50km_NoMergeJunAug_m5.shp',layer='butterfly_grid_50km_NoMergeJunAug_m5',verbose=F,stringsAsFactors=F) #shapefile with grid
 grid50 <- as(butterfly_grid, "sf")
 g50 <- inla.read.graph('./shapefiles/nb50.graph') #graph network of grid neighbors
 eco1 = spTransform(readOGR(dsn='./shapefiles/na_cec_eco_l1/NA_CEC_Eco_Level1.shp',layer='NA_CEC_Eco_Level1',verbose=F,stringsAsFactors=F),CRS(proj1)) #ecoregion shapefiles - used for mapping later
 eco_sf = as(eco1, 'sf')
 
-species = unique(butterfly_counts1$Species)
-scount = apply(array(species),1,function(x){sum(butterfly_counts1$N.butterflies[which(butterfly_counts1$Species==x)],na.rm=T)})
-stab = cbind(species,scount)
-stab[order(scount),]
-butterfly_counts1 = butterfly_counts1[which(butterfly_counts1$Species!='Thymelicus lineola' & butterfly_counts1$Species!='Pieris rapae' & butterfly_counts1$Species!='Phyciodes tharos' & butterfly_counts1$Species!='Colias philodice'),]
-species = unique(butterfly_counts1$Species)
-scount = apply(array(species),1,function(x){sum(butterfly_counts1$N.butterflies[which(butterfly_counts1$Species==x)],na.rm=T)})
-stab = cbind(species,scount)
-stab[order(scount),]
+# Remove top 2 invasives
+butterfly_counts1 = butterfly_counts1[which(butterfly_counts1$Species!='Thymelicus lineola' & butterfly_counts1$Species!='Pieris rapae'),]
 
 # Aggregate butterfly abundance across species per site
 butterfly_counts = data.frame()
@@ -349,7 +336,7 @@ for (s in 1:length(sites)){
 		butterfly_counts = data.frame(rbind(butterfly_counts,add.dat),stringsAsFactors=F)
 	}
 }
-write.table(butterfly_counts,'butterfly_total_abundance_50km_wNAs_noTop4.txt',sep='\t',row.names=F)
+write.table(butterfly_counts,'butterfly_total_abundance_50km_noMergeJunAug_m5_noTP.txt',sep='\t',row.names=F)
 
 # INLA model
 sp_counts = butterfly_counts
@@ -444,7 +431,7 @@ pit2 <- ggplot(data=pit1, aes(x=PIT)) +
   xlab("Probability integral transform (PIT)") +
   ylab("Count"); pit2; summary(pit1$PIT)
 #	ggsave(paste0(species[i],'_pit.png'),plot=pit2,device='png',path='./plots/PIT/',width=8,height=8,units="in",dpi=300)
-ggsave('Allspecies_pit_1993-2018_50km_wNAs_noTop4.png',plot=pit2,device='png',path='./plots/PIT/',width=8,height=8,units="in",dpi=300)
+ggsave('Allspecies_pit_1993-2018_50km_noMergeJunAug_m5_noTP.png',plot=pit2,device='png',path='./plots/PIT/',width=8,height=8,units="in",dpi=300)
 
 # collect posterior summaries into one dataframe
 grid_key <- unique(sp_counts[, c("grid_id", "EcoI", "EcoII")])	
@@ -459,7 +446,7 @@ sm2[3,] = trimws(gsub('Median :','',sm2[3,]),which='both')
 
 # Make cell level maps
 results_cells <- merge(butterfly_grid, post_sum, by="grid_id", all=F)
-write.table(results_cells@data,'Allspecies_trends_1993-2018_50km_wNAs_noTop4.txt',sep='\t',quote=F,row.names=F) # Write model output to file
+write.table(results_cells@data,'./inla_model_output/50km_wNAs_noMerge/Allspecies_trends_1993-2018_50km_noMergeJunAug_m5_noTP.txt',sep='\t',quote=F,row.names=F) # Write model output to file
 res_sf <- as(results_cells, "sf")
 
 # grid
@@ -522,30 +509,12 @@ alph_p1 <- ggplot() +
 
 # print cell maps
 print(noquote('---drawing maps---'))
-ggsave('Allspecies_effort_1993-2018_50km_wNAs_noTop4.png',plot =eps_p1,device='png',path='./',width=8,height=8,units="in",dpi=300)
-ggsave('Allspecies_change_per_year_1993-2018_50km_wNAs_noTop4.png',plot =tau_p1,device='png',path='./',width=8,height=8,units="in",dpi=300)
-ggsave('Allspecies_relative_abundance_1993-2018_50km_wNAs_noTop4.png',plot =alph_p1,device='png',path='./',width=8,height=8,units="in",dpi=300)
+##	ggsave(paste0(species[i],'_circles.png'),plot =grid_p1,device='png',path='./plots/model_maps/',width=8,height=8,units="in",dpi=300)
+##	ggsave(paste0(species[i],'_change_per_year_interval.png'),plot =tau_p2,device='png',path='./plots/model_maps/',width=8,height=8,units="in",dpi=300)
+##	ggsave(paste0(species[i],'_change_per_year_significant.png'),plot =tau_p3,device='png',path='./plots/model_maps/',width=8,height=8,units="in",dpi=300)
+ggsave('Allspecies_effort_1993-2018_50km_noMergeJunAug_m5_noTP.png',plot =eps_p1,device='png',path='./plots/model_maps/50km_wNAs_noMerge/',width=8,height=8,units="in",dpi=300)
+ggsave('Allspecies_change_per_year_1993-2018_50km_noMergeJunAug_m5_noTP.png',plot =tau_p1,device='png',path='./plots/model_maps/50km_wNAs_noMerge/',width=8,height=8,units="in",dpi=300)
+ggsave('Allspecies_relative_abundance_1993-2018_50km_noMergeJunAug_m5_noTP.png',plot =alph_p1,device='png',path='./plots/model_maps/50km_wNAs_noMerge/',width=8,height=8,units="in",dpi=300)
 
-res_sf = read.table('Allspecies_trends_1993-2018_50km_wNAs_noTop4.txt',sep='\t',as.is=T,check.names=F,header=T)
-par(oma=c(0,0,0,0),mar=c(0,5,0,0))
-boxplot(res_sf$tau,ylab='Total abundance trend',ylim=c(-10,10),cex.lab=2,boxlwd=2,staplelwd=2,whisklwd=2,whisklty=1,col='grey40',outpch=16,frame=F,yaxt='n')
-axis(2,lwd=3,at=seq(-10,10,2),cex.axis=1.5)
-abline(a=0,b=0,lwd=2,col='red',lty=2)
-legend('topright',legend=c('No. sites = 497','No. cells = 414'),bty='n',cex=2,ncol=1)
-
-dev.off()
-hist(res_sf$tau,main='',ylim=c(0,200),breaks=seq(-12,6,2),ylab='No. species',xlab='Median total abundance trend',cex.lab=1.5,cex.axis=1.2)
-abline(v=0,lwd=2,col='red')
-
-res_sf1 = read.table('Allspecies_trends_1993-2018_50km_wNAs.txt',sep='\t',as.is=T,check.names=F,header=T)
-res_sf2 = read.table('Allspecies_trends_1993-2018_50km_wNAs_noTop4.txt',sep='\t',as.is=T,check.names=F,header=T)
-quantile(res_sf1$tau)
-quantile(res_sf2$tau)
-
-res_sf1[which(res_sf1$tau<(-10)),] #grid_id 3255 trend = -10.8%/year
-sp_counts[which(sp_counts$grid_id==3255),]
-
-res_sf1[which(res_sf1$tau>5),] #grid_id 688 trend = +5.96%/year
-sp_counts[which(sp_counts$grid_id==688),]
-
-
+res_sf = read.table('./inla_model_output/50km_wNAs_noMerge/Allspecies_trends_1993-2018_50km_noMergeJunAug_m5_noTP.txt',sep='\t',as.is=T,check.names=F,header=T)
+quantile(res_sf$tau) #median=-0.408
