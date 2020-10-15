@@ -1,10 +1,12 @@
 
+# Code used to examine trait*environment interactions when predicting butterfly species abundance trends
+
 # Note: fourth corner step took > 900 Gb of memory
 
 library(mvabund)
 library(lattice)
 
-data1 = read.table('./data/butterfly_traits_envars_trends_50km_NoMergeJunAug_m5_trim_2traits.txt',sep='\t',as.is=T,check.names=F,header=T)
+data1 = read.table('./data/butterfly_traits_envars_trends_50km_NoMergeJunAug_m5_trim_6traits.txt',sep='\t',as.is=T,check.names=F,header=T)
 gids = sort(unique(data1$grid_id))
 species = sort(unique(data1$Species))
 traits = c('AdultSize','Diet.breadth.families')
@@ -46,4 +48,9 @@ fit1 = traitglm(R=data.frame(R.mat),L=data.frame(L.mat),Q=data.frame(Q.mat),meth
 
 fit1$fourth
 
+fourth = read.table('./butterfly_fourth_table_wNAs_JunAug.txt',as.is=T,check.names=F,header=T)
 
+a = max(abs(fourth))
+colort = colorRampPalette(c("red","white","blue")) 
+plot.4th = levelplot(t(as.matrix(fourth)),xlab="Environmental Variables",ylab="Species traits",col.regions=colort(100),at=seq(-a, a, length=100),scales=list(x=list(rot=45)))
+print(plot.4th)

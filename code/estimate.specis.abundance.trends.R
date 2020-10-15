@@ -1,5 +1,5 @@
 
-setwd('C:/Users/mcros/Desktop/Postdoc UGA/NABA_butterflies')
+# Code used to estimate trends in butterfly abundance, per species per grid cell
 
 library(rgdal)
 library(sp)
@@ -248,6 +248,7 @@ up = length(which(trends$mdn_Tau>1)); up
 down = length(which(trends$mdn_Tau<(-1))); down
 100*down/N
 
+
 ##########################################################################################################################################################
 # 50 km scale, pseudoabsences reported as NA, Jul set
 
@@ -428,37 +429,4 @@ for (i in 1:length(species)){
 }
 write.table(sp.summary,'./butterfly_trends_summary_1993-2018_50km_noMergeJul_m5.txt',sep='\t',quote=F,row.names=F)
 
-
-###############################################
-# Compare JunAug and Jul sets
-
-files = list.files('./inla_model_output/50km_wNAs_noMerge',full.names=T)
-jul.files = files[grep('Jul',files)]
-junaug.files = files[grep('JunAug',files)]
-
-junaug.trends = read.table(junaug.files[1],sep='\t',as.is=T,check.names=F,header=T)
-junaug.trends$Species = rep(strsplit(strsplit(junaug.files[1],'/')[[1]][4],'_')[[1]][1],nrow(junaug.trends))
-for (i in 1:length(junaug.files)){
-	add = read.table(junaug.files[i],sep='\t',as.is=T,check.names=F,header=T)
-	add$Species = rep(strsplit(strsplit(junaug.files[i],'/')[[1]][4],'_')[[1]][1],nrow(add))
-	junaug.trends = data.frame(rbind(junaug.trends,add),stringsAsFactors=F)
-}
-
-jul.trends = read.table(jul.files[1],sep='\t',as.is=T,check.names=F,header=T)
-jul.trends$Species = rep(strsplit(strsplit(jul.files[1],'/')[[1]][4],'_')[[1]][1],nrow(jul.trends))
-for (j in 1:length(jul.files)){
-	add = read.table(jul.files[j],sep='\t',as.is=T,check.names=F,header=T)
-	add$Species = rep(strsplit(strsplit(jul.files[j],'/')[[1]][4],'_')[[1]][1],nrow(add))
-	jul.trends = data.frame(rbind(jul.trends,add),stringsAsFactors=F)
-}
-
-junaug.trends$spgd = paste(junaug.trends$Species,junaug.trends$grid_id,sep='_')
-jul.trends$spgd = paste(jul.trends$Species,jul.trends$grid_id,sep='_')
-trends = merge(junaug.trends,jul.trends,by='spgd')
-
-plot(trends$tau.x,trends$tau.y)
-abline(v=0)
-abline(h=0)
-swap = trends[which(trends$tau.x<0 & trends$tau.y>0),]
-swap2 = trends[which(trends$tau.x>0 & trends$tau.y<0),]
 

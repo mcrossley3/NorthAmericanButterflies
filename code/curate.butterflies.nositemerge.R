@@ -1,5 +1,7 @@
 
 
+# Code used to curate raw butterfly count data
+
 #################################################################################
 # Check & Merge data (merge sub-species)
 
@@ -52,9 +54,6 @@ dat$GenusSpecies[which(dat$GenusSpecies=='Limenitis archippusXweidemeyerii')] = 
 dat$GenusSpecies[which(dat$GenusSpecies=='Limenitis arthemisXarchippus')] = 'Limenitis arthemis'
 dat$GenusSpecies[which(dat$GenusSpecies=='Limenitis arthemisXweidemeyerii')] = 'Limenitis arthemis'
 dat$GenusSpecies[which(dat$GenusSpecies=='Limenitis lorquiniXarthemis')] = 'Limenitis lorquini'
-#dat$GenusSpecies[which(dat$GenusSpecies=='Boloria montinus')] = 'Boloria chariclea' #NABA considers separate species
-#dat$GenusSpecies[which(dat$GenusSpecies=='Hemiargus ammon')] = 'Cyclargus ammon' #NABA considers this Hemiargus ammon
-#dat$GenusSpecies[which(dat$GenusSpecies=='Hemiargus thomasi')] = 'Cyclargus thomasi' #NABA considers this Hemiargus thomasi
 dat$GenusSpecies[which(dat$GenusSpecies=='Colias scudderi')] = 'Colias scudderii' #fix typo
 dat$GenusSpecies[which(dat$GenusSpecies=='Neophasia terlootii')] = 'Neophasia terlooii' #fix typo
 

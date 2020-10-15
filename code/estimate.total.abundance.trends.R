@@ -1,5 +1,5 @@
 
-
+# Code used to estimate trends in butterfly total abundance
 
 library(rgdal)
 library(sp)

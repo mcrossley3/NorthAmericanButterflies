@@ -1,4 +1,5 @@
 
+# Code used to summarize butterfly abundance and diversity trends
 
 ##########################################################################
 # Median trends across cells per species
@@ -48,7 +49,7 @@ length(which(sigtrends<0)) #1,391
 length(which(sigtrends<0)) / length(sigtrends) #72.9%
 
 # Do trends vary by ecoregion?
-data1 = read.table('./data/butterfly_traits_envars_trends_50km_NoMergeJul_m5_trim_6traits.txt',sep='\t',as.is=T,check.names=F,header=T); str(data1)
+data1 = read.table('./data/butterfly_traits_envars_trends_50km_NoMergeJunAug_m5_trim_6traits.txt',sep='\t',as.is=T,check.names=F,header=T); str(data1)
 data1$Species = as.factor(data1$Species)
 data1$Family = as.factor(data1$Family)
 data1$EcoI = NA
@@ -212,14 +213,14 @@ h3 = hist(dat$perc.down*100,breaks=seq(0,100,5),xaxt='n',yaxt='n',xlab='% Grid c
 axis(1,lwd=3,cex.axis=1.5)
 axis(2,lwd=3,cex.axis=1.5,at=seq(0,150,30))
 # Panel C
-trend.summary = read.table('./diversity_trends_JunAug.txt',sep='\t',as.is=T,check.names=F,header=T)
-hist(trend.summary$Richness.rarefied.trend,xlab='Rarefied richness trend (sd/yr)',ylim=c(0,350),breaks=seq(-0.6,0.6,0.05),ylab='No. sites',cex.lab=2,col='grey50',yaxt='n',xaxt='n',main='')
-axis(1,lwd=3,cex.axis=1.5,at=round(seq(-0.6,0.6,0.1),2))
+trend.summary = read.table('./diversity_trends_JunAug_minsamps.txt',sep='\t',as.is=T,check.names=F,header=T)
+hist(trend.summary$Richness.rarefied100.trend,xlab='Rarefied richness trend (sd/yr)',ylim=c(0,80),breaks=seq(-0.7,0.6,0.05),ylab='No. sites',cex.lab=2,col='grey50',yaxt='n',xaxt='n',main='')
+axis(1,lwd=3,cex.axis=1.5,at=round(seq(-0.7,0.6,0.1),2))
 axis(2,lwd=3,cex.axis=1.5)
 abline(v=0,lwd=3,lty=1,col='pink')
 # Panel D
-hist(trend.summary$Evenness.evar.rarefied.trend,xlab='Rarefied evenness trend (sd/yr)',ylim=c(0,150),breaks=seq(-0.6,0.5,0.05),ylab='No. sites',cex.lab=2,col='grey50',yaxt='n',xaxt='n',main='')
-axis(1,lwd=3,cex.axis=1.5,at=round(seq(-0.6,0.5,0.1),1))
+hist(trend.summary$Evenness.evar.rarefied100.trend,xlab='Rarefied evenness trend (sd/yr)',ylim=c(0,80),breaks=seq(-0.7,0.5,0.05),ylab='No. sites',cex.lab=2,col='grey50',yaxt='n',xaxt='n',main='')
+axis(1,lwd=3,cex.axis=1.5,at=round(seq(-0.7,0.5,0.1),1))
 axis(2,lwd=3,cex.axis=1.5)
 abline(v=0,lwd=3,lty=1,col='pink')
 # Panel E
@@ -237,14 +238,6 @@ abline(v=0,lwd=3,col='pink')
 dev.off()
 
 
-
-secosum$up2down = secosum$up / secosum$down
-hist(secosum$up2down)
-secosum$down2up = secosum$down / secosum$up
-hist(secosum$down2up)
-length(which(secosum$up2down<1)) / nrow(secosum)
-length(which(secosum$up2down>1)) / nrow(secosum)
-
 # Histograms per ecoregion
 png('./plots/increasing or decreasing abundance ecoregion histograms.png',height=480*2,width=480*2)
 par(mfrow=c(5,4),oma=c(0,0,0,0),mar=c(5,5,3,1))
@@ -260,6 +253,47 @@ for (e in 1:length(ecos)){
 }
 dev.off()
 
+
+#####
+# Diversity change barplot
+
+trend.summary = read.table('./diversity_trends_JunAug_minsamps.txt',sep='\t',as.is=T,check.names=F,header=T)
+
+# Rarefied richness, minsamp=100
+dat = trend.summary[which(!is.na(trend.summary[,5])),c(1,5)]
+t1 = t.test(dat[,2])
+
+# Barplot
+mean1 = t1[['estimate']]
+uppers = t1[['conf.int']][2]
+lowers = t1[['conf.int']][1]
+png('./plots/t-test rarefied richness min100 barplot JunAug.png',width=200,height=550)
+par(cex.lab=2,cex.axis=1.5,oma=c(0,0,0,0),mar=c(15,8,2,2),lwd=2)
+bars = barplot(mean1,ylim=c(-0.03,0.03),names.arg='',ylab='Rarefied richness trend (sd/yr)',main=NULL,lwd=2)
+abline(h=0)
+axis(2,lwd=2)
+text(x=bars,y=par("usr")[3]-0.05,srt=90,adj=1,labels='Species',xpd=T,cex=2)
+segments(bars,lowers,bars,uppers,lwd=2)
+arrows(bars,lowers,bars,uppers,lwd=2,angle=90,code=3,length=(par("usr")[2]-par("usr")[1])/15)
+dev.off()
+
+# Rarefied evenness, minsamp=100
+dat = trend.summary[which(!is.na(trend.summary[,11])),c(1,11)]
+t1 = t.test(dat[,2])
+
+# Barplot
+mean1 = t1[['estimate']]
+uppers = t1[['conf.int']][2]
+lowers = t1[['conf.int']][1]
+png('./plots/t-test rarefied evenness min100 barplot JunAug.png',width=200,height=550)
+par(cex.lab=2,cex.axis=1.5,oma=c(0,0,0,0),mar=c(15,8,2,2),lwd=2)
+bars = barplot(mean1,ylim=c(-0.02,0.02),names.arg='',ylab='Rarefied evenness trend (sd/yr)',main=NULL,lwd=2)
+abline(h=0)
+axis(2,lwd=2)
+text(x=bars,y=par("usr")[3]-0.05,srt=90,adj=1,labels='Species',xpd=T,cex=2)
+segments(bars,lowers,bars,uppers,lwd=2)
+arrows(bars,lowers,bars,uppers,lwd=2,angle=90,code=3,length=(par("usr")[2]-par("usr")[1])/15)
+dev.off()
 
 
 

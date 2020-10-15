@@ -1,4 +1,6 @@
 
+# Code used to estimate trends in butterfly richness and evenness
+
 #####################################
 # Rank abundance curve metrics
 
@@ -328,14 +330,13 @@ check = div.summary[grep('Anchorage',div.summary$Site),]
 sites = unique(div.summary$Site)
 years = 1993:2018
 trend.summary = data.frame('Site'=NA,'Richness.trend'=-999,'Richness.rarefied.trend'=-999,'Evenness.pei.trend'=-999,'Evenness.pei.rarefied.trend'=-999,'Evenness.evar.trend'=-999,'Evenness.evar.rarefied.trend'=-999,'Dominance.trend'=-999,'Fishers.alpha.trend'=-999,'Decay.rate.trend'=-999,'Party_Hours.trend'=-999,'Series.length'=-999)
-trend.summary2 = data.frame('Site'=NA,'Richness.trend'=-999,'Richness.rarefied.trend'=-999,'Evenness.pei.trend'=-999,'Evenness.pei.rarefied.trend'=-999,'Evenness.evar.trend'=-999,'Evenness.evar.rarefied.trend'=-999,'Dominance.trend'=-999,'Fishers.alpha.trend'=-999,'Decay.rate.trend'=-999,'Party_Hours.trend'=-999,'Series.length'=-999)
 variables = c('Richness','Richness.rarefied','Evenness.pei','Evenness.pei.rarefied','Evenness.evar','Evenness.evar.rarefied','Dominance','Fishers.alpha','Decay.rate','Party_Hours')
 thresh = 5
 lost.sites = data.frame()
 for (f in 1:length(sites)){
 	print(f)
 	dat1 = div.summary[which(div.summary$Site==sites[f]),]
-	trend.summary[f,1] = trend.summary2[f,1] = sites[f]
+	trend.summary[f,1] = sites[f]
 	for (v in 1:length(variables)){
 		vdat = dat1[,which(colnames(dat1)==variables[v])]
 		if (length(which(!is.na(vdat)))>=thresh){ #remove time series shorter than 5 years
@@ -349,30 +350,14 @@ for (f in 1:length(sites)){
 				ph = Z
 				ph[which(!is.na(Z))] = dat1$Party_Hours[which(!is.na(vdat))]
 				t.scale = years - years[1]
-	#			t.scale = 1:length(years); t.scale = (t.scale-min(t.scale))/max(t.scale) #original transform: scale between 0 and 1
 				arr.Z = AR_reml(Z ~ t.scale) #Z-transformed time trends
 				trend.summary[f,v+1] = arr.Z$coef[2] #slope of trend line
 				trend.summary[f,12] = length(t.scale)
-				# Plot Z transform on t.scale fit
-	#			png(paste0('./plots/time_trends/diversity/fitted/',variables[v],'_',unique(dat1$LTER.site),'_',uL[l],'.png'))
-	#			plot(Z ~ t.scale, main=paste0(variables[v], ": b = ",round(arr.Z$b, digits=3)))
-	#			curve(arr.Z$coef[1] + arr.Z$coef[2] * x, from=0, to=max(t.scale), add=T)
-	#			dev.off()
 				#Plot time series
 				png(paste0('./plots/diversity_lineplots/JunAug/',variables[v],'_',f,'.png'))
 				plot(t.scale,X,type='l',main=sites[f],xlab='Scaled time',ylab=variables[v],lwd=2)
-	#			abline(a=arr.Z$coef[1],b=arr.Z$coef[2],lty=2,col='red',lwd=1.5)
 				legend('topleft',legend=c(paste0('slope = ',round(arr.Z$coef[2],2)),paste0('length = ',length(which(!is.na(Z)))),paste0('autocor = ',round(arr.Z$b,2)),paste0('logLik = ',round(arr.Z$logLik,2))),ncol=1,bty='n',adj=0)
 				dev.off()
-
-				# Generalized linear model, weighted by Party Hours
-				if (variables[v]=='Evenness.evar.rarefied' | variables[v]=='Richness.rarefied'){
-					data1 = data.frame('Z'=Z, 't.scale'=t.scale,'Party_Hours'=ph)
-					gls.wt.Z <- gls(Z ~ t.scale, weights = varFixed(value = ~ exp(-Party_Hours/100)), correlation=corAR1(form = ~ 1), na.action = na.omit, data=data1) # Here is the weighting assuming the variance is proportional to Party Hours (which is like assuming Poisson sampling)
-					trend.summary2[f,v+1] = gls.wt.Z$coefficients[2] #slope of trend line
-					trend.summary2[f,12] = length(t.scale)
-				} else {
-				}
 			}
 		} else {
 			lost.sites = data.frame(rbind(lost.sites,data.frame('Variable'=variables[v],'Site'=sites[f],stringsAsFactors=F)),stringsAsFactors=F)
@@ -380,12 +365,10 @@ for (f in 1:length(sites)){
 	}
 }
 write.table(trend.summary,'./diversity_trends_JunAug.txt',sep='\t',row.names=F)
-write.table(trend.summary2,'./diversity_trends_wt_JunAug.txt',sep='\t',row.names=F)
 
 length(unique(lost.sites$Site)) #21 sites with <5 years data for at least one metric
 
 trend.summary = read.table('./diversity_trends_JunAug.txt',sep='\t',as.is=T,check.names=F,header=T)
-trend.summary2 = read.table('./diversity_trends_wt_JunAug.txt',sep='\t',as.is=T,check.names=F,header=T)
 
 length(which(trend.summary$Richness.rarefied.trend>0.05)) # 19
 length(which(trend.summary$Richness.rarefied.trend>0.05)) / nrow(trend.summary) # 3.8%
@@ -396,14 +379,6 @@ length(which(trend.summary$Evenness.evar.rarefied.trend>0.05)) # 61
 length(which(trend.summary$Evenness.evar.rarefied.trend>0.05)) / nrow(trend.summary) # 12.1%
 length(which(trend.summary$Evenness.evar.rarefied.trend<(-0.05))) # 251
 length(which(trend.summary$Evenness.evar.rarefied.trend<(-0.05))) / nrow(trend.summary) # 50.0%
-
-library(scales)
-par(mfrow=c(1,2),oma=c(0,0,0,0),mar=c(5,5,1,1))
-plot(trend.summary$Richness.rarefied.trend,trend.summary2$Richness.rarefied.trend,xlab='Rarefied richness trend',ylab='Rarefied richness trend weighted',cex.lab=1.5,cex.axis=1.2,bty='n',pch=16,col=alpha('black',0.5))
-abline(0,1)
-plot(trend.summary$Evenness.evar.rarefied.trend,trend.summary2$Evenness.evar.rarefied.trend,xlab='Rarefied evenness trend',ylab='Rarefied evenness trend weighted',cex.lab=1.5,cex.axis=1.2,bty='n',pch=16,col=alpha('black',0.5))
-abline(0,1)
-
 
 
 # Split diversity trends by ecoregion
@@ -431,6 +406,220 @@ for (e in 1:length(ecos)){
 	axis(2,lwd=3,cex.axis=1.5)
 	abline(v=0,lwd=3,lty=1,col='pink')
 }
+
+
+##########
+# Repeate richness and evenness rarefactions with a range of higher minimum sample sizes
+# Note: relies on "comm.mat.list" and "sites" created in code above
+
+richness.rarefied = matrix(NA,nrow=length(sites),ncol=length(years))
+raremaxes = c()
+for (y in 1:length(years)){
+	print(years[y])
+	mat1 = comm.mat.list[[y]]
+	mat1[which(is.na(mat1))] = 0
+	raremax <- min(rowSums(mat1))
+	raremaxes = c(raremaxes,raremax)
+	Srare <- rarefy(mat1, raremax)
+	keep = keep.list[[y]]
+	richness.rarefied[keep,y] = Srare
+}
+
+evenness.evar.rarefied = matrix(NA,nrow=length(sites),ncol=length(years))
+for (y in 1:length(years)){
+	print(years[y])
+	mat1 = comm.mat.list[[y]]
+	mat1[which(is.na(mat1))] = 0
+	raremax <- min(rowSums(mat1))
+	Erare.evar <- rarefy2(xx=mat1, sample1=raremax, divfun=get.evar)
+	keep = keep.list[[y]]
+	evenness.evar.rarefied[keep,y] = Erare.evar
+}
+
+rowsums = unlist(lapply(comm.mat.list,function(x){rowSums(x)}))
+quantile(rowsums)
+
+minsamps = c(10,100,500,1000)
+richness.rarefied2 = list()
+for (j in 1:length(minsamps)){
+	print(minsamps[j])
+	richness.rarefied.add = matrix(NA,nrow=length(sites),ncol=length(years))
+	for (y in 1:length(years)){
+		mat1 = comm.mat.list[[y]]
+		mat1[which(is.na(mat1))] = 0
+		raremax = minsamps[j]
+		rowsums2 = rowSums(mat1)
+		pos = which(rowsums2 > raremax)
+		mat2 = mat1[pos,]
+		Srare = rarefy(mat2, raremax)
+		Srare2 = rep(NA,nrow(mat1))
+		Srare2[pos] = Srare #replace NAs with rarefied values, where sites had a large enough sample size
+		keep = keep.list[[y]]
+		richness.rarefied.add[keep,y] = Srare2
+	}
+	richness.rarefied2[[j]] = richness.rarefied.add
+}
+evenness.evar.rarefied2 = list()
+for (j in 1:length(minsamps)){
+	print(minsamps[j])
+	evenness.evar.rarefied.add = matrix(NA,nrow=length(sites),ncol=length(years))
+	for (y in 1:length(years)){
+		mat1 = comm.mat.list[[y]]
+		mat1[which(is.na(mat1))] = 0
+		raremax = minsamps[j]
+		rowsums2 = rowSums(mat1)
+		pos = which(rowsums2 > raremax)
+		mat2 = mat1[pos,]
+		Erare.evar = rarefy2(xx=mat2, sample1=raremax, divfun=get.evar)
+		Erare.evar2 = rep(NA,nrow(mat1))
+		Erare.evar2[pos] = Erare.evar #replace NAs with rarefied values, where sites had a large enough sample size
+		keep = keep.list[[y]]
+		evenness.evar.rarefied.add[keep,y] = Erare.evar2
+	}
+	evenness.evar.rarefied2[[j]] = evenness.evar.rarefied.add
+}
+
+hills0 = matrix(NA,nrow=length(sites),ncol=length(years))
+hills1 = matrix(NA,nrow=length(sites),ncol=length(years))
+hills2 = matrix(NA,nrow=length(sites),ncol=length(years))
+for (y in 1:length(years)){
+	hills = renyi(comm.mat.list[[y]],scales=c(0,1,2),hill=TRUE)
+	hills0[keep.list[[y]],y] = hills$`0`
+	hills1[keep.list[[y]],y] = hills$`1`
+	hills2[keep.list[[y]],y] = hills$`2`
+}
+
+# Summarize metrics per site*year
+div.summary = data.frame('Site'=NA,'Year'=NA,'Richness'=-999,'Richness.rarefied'=-999,'Richness.rarefied10'=-999,'Richness.rarefied100'=-999,'Richness.rarefied500'=-999,'Richness.rarefied1000'=-999,
+	'Evenness.evar'=-999,'Evenness.evar.rarefied'=-999,'Evenness.evar.rarefied10'=-999,'Evenness.evar.rarefied100'=-999,'Evenness.evar.rarefied500'=-999,'Evenness.evar.rarefied1000'=-999,
+	'Hill.0'=-999,'Hill.1'=-999,'Hill.2'=-999,stringsAsFactors=F)
+rx = 1
+for (s in 1:length(sites)){
+	print(s)
+	dat = butterfly_counts[which(butterfly_counts$Site==sites[s]),]
+	years = sort(as.numeric(unique(dat$Year)))
+	for (y in 1:length(years)){
+		# Get curve metrics
+		dat2 = dat[which(dat$Year==years[y]),]
+		pos1 = which(dat2$N.butterflies>0)
+		ab2 = dat2$N.butterflies[pos1]
+		ypos = which(1993:2018==years[y])
+		div.summary[rx,1] = sites[s]
+		div.summary[rx,2] = years[y]
+		div.summary[rx,3] = length(pos1) #richness
+		div.summary[rx,4] = richness.rarefied[s,ypos] #rarefied richness
+		div.summary[rx,5] = richness.rarefied2[[1]][s,ypos]
+		div.summary[rx,6] = richness.rarefied2[[2]][s,ypos]
+		div.summary[rx,7] = richness.rarefied2[[3]][s,ypos]
+		div.summary[rx,8] = richness.rarefied2[[4]][s,ypos]
+		div.summary[rx,9] = get.evar(ab2) #Evar evenness
+		div.summary[rx,10] = evenness.evar.rarefied[s,ypos] #rarefied Evar evenness
+		div.summary[rx,11] = evenness.evar.rarefied2[[1]][s,ypos]
+		div.summary[rx,12] = evenness.evar.rarefied2[[2]][s,ypos]
+		div.summary[rx,13] = evenness.evar.rarefied2[[3]][s,ypos]
+		div.summary[rx,14] = evenness.evar.rarefied2[[4]][s,ypos]
+		div.summary[rx,15] = hills0[s,ypos]
+		div.summary[rx,16] = hills1[s,ypos]
+		div.summary[rx,17] = hills2[s,ypos]
+		rx = rx + 1
+	}
+}
+write.table(div.summary,'site_diversity_summary_JunAug_minsamps.txt',sep='\t',row.names=F,quote=F)
+chart.Correlation(div.summary[,2:8], histogram=TRUE, pch=19)
+chart.Correlation(div.summary[,c(2,9:14)], histogram=TRUE, pch=19)
+chart.Correlation(div.summary[,c(2,7,15:17)], histogram=TRUE, pch=19)
+hist(div.summary$Richness)
+x11()
+hist(div.summary$Richness.rarefied100)
+
+con = file('site_diversity_summary_JunAug_minsamps.txt','r')
+add.lines = readLines(con)
+close(con)
+div.summary = data.frame(t(apply(array(add.lines[-1]),1,function(x){strsplit(x,'\t')[[1]]})),stringsAsFactors=F)
+colnames(div.summary) = strsplit(add.lines[1],'\t')[[1]]
+div.summary$Richness = as.numeric(div.summary$Richness)
+div.summary$Richness.rarefied = as.numeric(div.summary$Richness.rarefied)
+div.summary$Richness.rarefied10 = as.numeric(div.summary$Richness.rarefied10)
+div.summary$Richness.rarefied100 = as.numeric(div.summary$Richness.rarefied100)
+div.summary$Richness.rarefied500 = as.numeric(div.summary$Richness.rarefied500)
+div.summary$Richness.rarefied1000 = as.numeric(div.summary$Richness.rarefied1000)
+div.summary$Evenness.evar = as.numeric(div.summary$Evenness.evar)
+div.summary$Evenness.evar.rarefied = as.numeric(div.summary$Evenness.evar.rarefied)
+div.summary$Evenness.evar.rarefied10 = as.numeric(div.summary$Evenness.evar.rarefied10)
+div.summary$Evenness.evar.rarefied100 = as.numeric(div.summary$Evenness.evar.rarefied100)
+div.summary$Evenness.evar.rarefied500 = as.numeric(div.summary$Evenness.evar.rarefied500)
+div.summary$Evenness.evar.rarefied1000 = as.numeric(div.summary$Evenness.evar.rarefied1000)
+div.summary$Hill.0 = as.numeric(div.summary$Hill.0)
+div.summary$Hill.1 = as.numeric(div.summary$Hill.1)
+div.summary$Hill.2 = as.numeric(div.summary$Hill.2)
+
+# Trends
+source('C:/Users/mcros/Desktop/Postdoc UGA/LTER_insect_diversity/code/AR_reml.R')
+sites = unique(div.summary$Site)
+years = 1993:2018
+trend.summary = data.frame('Site'=NA,'Richness.trend'=-999,'Richness.rarefied.trend'=-999,'Richness.rarefied10.trend'=-999,'Richness.rarefied100.trend'=-999,'Richness.rarefied500.trend'=-999,'Richness.rarefied1000.trend'=-999,
+	'Evenness.evar.trend'=-999,'Evenness.evar.rarefied.trend'=-999,'Evenness.evar.rarefied10.trend'=-999,'Evenness.evar.rarefied100.trend'=-999,'Evenness.evar.rarefied500.trend'=-999,'Evenness.evar.rarefied1000.trend'=-999,
+	'Hill.0.trend'=-999,'Hill.1.trend'=-999,'Hill.2.trend'=-999)
+variables = c('Richness','Richness.rarefied','Richness.rarefied10','Richness.rarefied100','Richness.rarefied500','Richness.rarefied1000',
+	'Evenness.evar','Evenness.evar.rarefied','Evenness.evar.rarefied10','Evenness.evar.rarefied100','Evenness.evar.rarefied500','Evenness.evar.rarefied1000',
+	'Hill.0','Hill.1','Hill.2')
+thresh = 5
+lost.sites = data.frame()
+for (f in 1:length(sites)){
+	print(f)
+	dat1 = div.summary[which(div.summary$Site==sites[f]),]
+	trend.summary[f,1] = sites[f]
+	for (v in 1:length(variables)){
+		vdat = dat1[,which(colnames(dat1)==variables[v])]
+		if (length(which(!is.na(vdat)))>=thresh){ #remove time series shorter than 5 years
+			if (length(unique(vdat))==1){
+				trend.summary[f,v+1] = 0 #no change in this metric
+			} else {
+				y.match = match(years,dat1$Year)
+				X = y.match
+				X[which(!is.na(X))] = vdat[X[which(!is.na(X))]] #fill-in values in the expanded time series
+				Z = (X – mean(X, na.rm=T))/sd(X, na.rm=T) # z-transform
+				t.scale = years - years[1]
+				arr.Z = AR_reml(Z ~ t.scale) #Z-transformed time trends
+				trend.summary[f,v+1] = arr.Z$coef[2] #slope of trend line
+				#Plot time series
+	#			png(paste0('./plots/diversity_lineplots/JunAug/',variables[v],'_',f,'.png'))
+	#			plot(t.scale,X,type='l',main=sites[f],xlab='Scaled time',ylab=variables[v],lwd=2)
+	#			legend('topleft',legend=c(paste0('slope = ',round(arr.Z$coef[2],2)),paste0('length = ',length(which(!is.na(Z)))),paste0('autocor = ',round(arr.Z$b,2)),paste0('logLik = ',round(arr.Z$logLik,2))),ncol=1,bty='n',adj=0)
+	#			dev.off()
+			}
+		} else {
+			lost.sites = data.frame(rbind(lost.sites,data.frame('Variable'=variables[v],'Site'=sites[f],stringsAsFactors=F)),stringsAsFactors=F)
+			trend.summary[f,v+1] = NA
+		}
+	}
+}
+write.table(trend.summary,'./diversity_trends_JunAug_minsamps.txt',sep='\t',row.names=F)
+
+trend.summary = read.table('./diversity_trends_JunAug_minsamps.txt',sep='\t',as.is=T,check.names=F,header=T)
+
+png('./plots/rarefaction richness trends.png',res=300,height=480*4,width=480*7)
+par(mfrow=c(2,3),oma=c(0,0,0,0),mar=c(5,5,2,0))
+hist(trend.summary$Richness.trend,main='raw',breaks=seq(-0.6,0.6,0.05),xaxt='n',yaxt='n',xlab='Richness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Richness.rarefied.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Richness.rarefied10.trend,main='minsamp=10',breaks=seq(-0.7,0.6,0.05),xaxt='n',yaxt='n',xlab='Rarefied richness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Richness.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Richness.rarefied100.trend,main='minsamp=100',breaks=seq(-0.7,0.6,0.05),xaxt='n',yaxt='n',xlab='Rarefied richness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Richness.rarefied100.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Richness.rarefied500.trend,main='minsamp=500',breaks=seq(-0.7,0.6,0.05),xaxt='n',yaxt='n',xlab='Rarefied richness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Richness.rarefied500.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Richness.rarefied1000.trend,main='minsamp=1000',breaks=seq(-0.7,0.6,0.05),xaxt='n',yaxt='n',xlab='Rarefied richness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Richness.rarefied1000.trend)))),bty='n',cex=1.5)
+dev.off()
+
+png('./plots/rarefaction evenness trends.png',res=300,height=480*4,width=480*7)
+par(mfrow=c(2,3),oma=c(0,0,0,0),mar=c(5,5,2,0))
+hist(trend.summary$Evenness.evar.trend,main='raw',breaks=seq(-0.6,0.7,0.05),xaxt='n',yaxt='n',xlab='Evenness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Evenness.evar.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Evenness.evar.rarefied10.trend,main='minsamp=10',breaks=seq(-0.7,0.7,0.05),xaxt='n',yaxt='n',xlab='Rarefied evenness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Evenness.evar.rarefied10.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Evenness.evar.rarefied100.trend,main='minsamp=100',breaks=seq(-0.7,0.7,0.05),xaxt='n',yaxt='n',xlab='Rarefied evenness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Evenness.evar.rarefied100.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Evenness.evar.rarefied500.trend,main='minsamp=500',breaks=seq(-0.7,0.7,0.05),xaxt='n',yaxt='n',xlab='Rarefied evenness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Evenness.evar.rarefied500.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Evenness.evar.rarefied1000.trend,main='minsamp=1000',breaks=seq(-0.7,0.7,0.05),xaxt='n',yaxt='n',xlab='Rarefied evenness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Evenness.evar.rarefied1000.trend)))),bty='n',cex=1.5)
+dev.off()
+
+par(mfrow=c(1,3),oma=c(0,0,0,0),mar=c(5,5,1,1))
+hist(trend.summary$Hill.0.trend,main='q=0',breaks=seq(-0.6,0.5,0.05),xaxt='n',yaxt='n',xlab='Hill 0 trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink')
+hist(trend.summary$Hill.1.trend,main='q=1',breaks=seq(-0.6,0.5,0.05),xaxt='n',yaxt='n',xlab='Hill 1 trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink')
+hist(trend.summary$Hill.2.trend,main='q=2',breaks=seq(-0.6,0.5,0.05),xaxt='n',yaxt='n',xlab='Hill2 trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink')
 
 
 ##################################
@@ -473,7 +662,6 @@ for (y in 1:length(years)){
 	richness.rarefied[keep,y] = Srare
 }
 
-library(scales)
 evenness.pei.rarefied = matrix(NA,nrow=length(sites),ncol=length(years))
 evenness.evar.rarefied = matrix(NA,nrow=length(sites),ncol=length(years))
 for (y in 1:length(years)){
@@ -487,6 +675,7 @@ for (y in 1:length(years)){
 	evenness.pei.rarefied[keep,y] = Erare.pei
 	evenness.evar.rarefied[keep,y] = Erare.evar
 }
+library(scales)
 plot(c(evenness.pei.rarefied),c(evenness.evar.rarefied),ylim=c(0,1),bty='n',xlab="Pielou's evenness rarefied",ylab="Evar rarefied",cex.lab=1.5,cex.axis=1.2,pch=16,col=alpha('black',0.5))
 
 
@@ -520,7 +709,9 @@ plot(c(evenness.pei.rarefied),c(evenness.evar.rarefied),ylim=c(0,1),bty='n',xlab
 # Get diversity metrics
 
 maxes = c()
-div.summary = data.frame('Site'=NA,'Year'=NA,'Decay.rate'=-999,'Dominance'=-999,'Fishers.alpha'=-999,'Richness'=-999,'Richness.rarefied'=-999,'Evenness.pei'=-999,'Evenness.evar'=-999,'Evenness.pei.rarefied'=-999,'Evenness.evar.rarefied'=-999,'Dominant.species1'=NA,'Dominant.species2'=NA,'Dominant.species3'=NA,'Party_Hours'=-999,'grid_id'=NA,'Latitude'=-999,'Longitude'=-999,'Julian.date'=NA,stringsAsFactors=F)
+div.summary = data.frame('Site'=NA,'Year'=NA,'Decay.rate'=-999,'Dominance'=-999,'Fishers.alpha'=-999,'Richness'=-999,'Richness.rarefied'=-999,
+	'Evenness.pei'=-999,'Evenness.evar'=-999,'Evenness.pei.rarefied'=-999,'Evenness.evar.rarefied'=-999,
+	'Dominant.species1'=NA,'Dominant.species2'=NA,'Dominant.species3'=NA,'Party_Hours'=-999,'grid_id'=NA,'Latitude'=-999,'Longitude'=-999,'Julian.date'=NA,stringsAsFactors=F)
 rx = 1
 for (s in 1:length(sites)){
 	print(s)
@@ -674,14 +865,13 @@ check = div.summary[grep('Anchorage',div.summary$Site),]
 sites = unique(div.summary$Site)
 years = 1993:2018
 trend.summary = data.frame('Site'=NA,'Richness.trend'=-999,'Richness.rarefied.trend'=-999,'Evenness.pei.trend'=-999,'Evenness.pei.rarefied.trend'=-999,'Evenness.evar.trend'=-999,'Evenness.evar.rarefied.trend'=-999,'Dominance.trend'=-999,'Fishers.alpha.trend'=-999,'Decay.rate.trend'=-999,'Party_Hours.trend'=-999,'Series.length'=-999)
-trend.summary2 = data.frame('Site'=NA,'Richness.trend'=-999,'Richness.rarefied.trend'=-999,'Evenness.pei.trend'=-999,'Evenness.pei.rarefied.trend'=-999,'Evenness.evar.trend'=-999,'Evenness.evar.rarefied.trend'=-999,'Dominance.trend'=-999,'Fishers.alpha.trend'=-999,'Decay.rate.trend'=-999,'Party_Hours.trend'=-999,'Series.length'=-999)
 variables = c('Richness','Richness.rarefied','Evenness.pei','Evenness.pei.rarefied','Evenness.evar','Evenness.evar.rarefied','Dominance','Fishers.alpha','Decay.rate','Party_Hours')
 thresh = 5
 lost.sites = data.frame()
 for (f in 1:length(sites)){
 	print(f)
 	dat1 = div.summary[which(div.summary$Site==sites[f]),]
-	trend.summary[f,1] = trend.summary2[f,1] = sites[f]
+	trend.summary[f,1] = sites[f]
 	for (v in 1:length(variables)){
 		vdat = dat1[,which(colnames(dat1)==variables[v])]
 		if (length(which(!is.na(vdat)))>=thresh){ #remove time series shorter than 5 years
@@ -695,30 +885,14 @@ for (f in 1:length(sites)){
 				ph = Z
 				ph[which(!is.na(Z))] = dat1$Party_Hours[which(!is.na(vdat))]
 				t.scale = years - years[1]
-	#			t.scale = 1:length(years); t.scale = (t.scale-min(t.scale))/max(t.scale) #original transform: scale between 0 and 1
 				arr.Z = AR_reml(Z ~ t.scale) #Z-transformed time trends
 				trend.summary[f,v+1] = arr.Z$coef[2] #slope of trend line
 				trend.summary[f,12] = length(t.scale)
-				# Plot Z transform on t.scale fit
-	#			png(paste0('./plots/time_trends/diversity/fitted/',variables[v],'_',unique(dat1$LTER.site),'_',uL[l],'.png'))
-	#			plot(Z ~ t.scale, main=paste0(variables[v], ": b = ",round(arr.Z$b, digits=3)))
-	#			curve(arr.Z$coef[1] + arr.Z$coef[2] * x, from=0, to=max(t.scale), add=T)
-	#			dev.off()
 				#Plot time series
 				png(paste0('./plots/diversity_lineplots/JunAug/',variables[v],'_',f,'.png'))
 				plot(t.scale,X,type='l',main=sites[f],xlab='Scaled time',ylab=variables[v],lwd=2)
-	#			abline(a=arr.Z$coef[1],b=arr.Z$coef[2],lty=2,col='red',lwd=1.5)
 				legend('topleft',legend=c(paste0('slope = ',round(arr.Z$coef[2],2)),paste0('length = ',length(which(!is.na(Z)))),paste0('autocor = ',round(arr.Z$b,2)),paste0('logLik = ',round(arr.Z$logLik,2))),ncol=1,bty='n',adj=0)
 				dev.off()
-
-				# Generalized linear model, weighted by Party Hours
-				if (variables[v]=='Evenness.evar.rarefied'){
-					data1 = data.frame('Z'=Z, 't.scale'=t.scale,'Party_Hours'=ph)
-					gls.wt.Z <- gls(Z ~ t.scale, weights = varFixed(value = ~ exp(-Party_Hours/100)), correlation=corAR1(form = ~ 1), na.action = na.omit, data=data1) # Here is the weighting assuming the variance is proportional to Party Hours (which is like assuming Poisson sampling)
-					trend.summary2[f,v+1] = gls.wt.Z$coefficients[2] #slope of trend line
-					trend.summary2[f,13] = length(t.scale)
-				} else {
-				}
 			}
 		} else {
 			lost.sites = data.frame(rbind(lost.sites,data.frame('Variable'=variables[v],'Site'=sites[f],stringsAsFactors=F)),stringsAsFactors=F)
@@ -726,12 +900,10 @@ for (f in 1:length(sites)){
 	}
 }
 write.table(trend.summary,'./diversity_trends_Jul.txt',sep='\t',row.names=F)
-write.table(trend.summary2,'./diversity_trends_wt_Jul.txt',sep='\t',row.names=F)
 
 length(unique(lost.sites$Site)) #21 sites with <5 years data for at least one metric
 
 trend.summary = read.table('./diversity_trends_Jul.txt',sep='\t',as.is=T,check.names=F,header=T)
-trend.summary2 = read.table('./diversity_trends_wt_Jul.txt',sep='\t',as.is=T,check.names=F,header=T)
 
 length(which(trend.summary$Richness.rarefied.trend>0.05)) # 36
 length(which(trend.summary$Richness.rarefied.trend>0.05)) / nrow(trend.summary) # 9.8%
@@ -744,6 +916,204 @@ length(which(trend.summary$Evenness.evar.rarefied.trend<(-0.05))) # 162
 length(which(trend.summary$Evenness.evar.rarefied.trend<(-0.05))) / nrow(trend.summary) # 44.0%
 
 
+##########
+# Repeate richness and evenness rarefactions with a range of higher minimum sample sizes
+# Note: relies on "comm.mat.list" and "sites" created in code above
+
+richness.rarefied = matrix(NA,nrow=length(sites),ncol=length(years))
+raremaxes = c()
+for (y in 1:length(years)){
+	print(years[y])
+	mat1 = comm.mat.list[[y]]
+	mat1[which(is.na(mat1))] = 0
+	raremax <- min(rowSums(mat1))
+	raremaxes = c(raremaxes,raremax)
+	Srare <- rarefy(mat1, raremax)
+	keep = keep.list[[y]]
+	richness.rarefied[keep,y] = Srare
+}
+
+evenness.evar.rarefied = matrix(NA,nrow=length(sites),ncol=length(years))
+for (y in 1:length(years)){
+	print(years[y])
+	mat1 = comm.mat.list[[y]]
+	mat1[which(is.na(mat1))] = 0
+	raremax <- min(rowSums(mat1))
+	Erare.evar <- rarefy2(xx=mat1, sample1=raremax, divfun=get.evar)
+	keep = keep.list[[y]]
+	evenness.evar.rarefied[keep,y] = Erare.evar
+}
+
+rowsums = unlist(lapply(comm.mat.list,function(x){rowSums(x)}))
+quantile(rowsums)
+
+minsamps = c(10,100,500,1000)
+richness.rarefied2 = list()
+for (j in 1:length(minsamps)){
+	print(minsamps[j])
+	richness.rarefied.add = matrix(NA,nrow=length(sites),ncol=length(years))
+	for (y in 1:length(years)){
+		mat1 = comm.mat.list[[y]]
+		mat1[which(is.na(mat1))] = 0
+		raremax = minsamps[j]
+		rowsums2 = rowSums(mat1)
+		pos = which(rowsums2 > raremax)
+		mat2 = mat1[pos,]
+		Srare = rarefy(mat2, raremax)
+		Srare2 = rep(NA,nrow(mat1))
+		Srare2[pos] = Srare #replace NAs with rarefied values, where sites had a large enough sample size
+		keep = keep.list[[y]]
+		richness.rarefied.add[keep,y] = Srare2
+	}
+	richness.rarefied2[[j]] = richness.rarefied.add
+}
+evenness.evar.rarefied2 = list()
+for (j in 1:length(minsamps)){
+	print(minsamps[j])
+	evenness.evar.rarefied.add = matrix(NA,nrow=length(sites),ncol=length(years))
+	for (y in 1:length(years)){
+		mat1 = comm.mat.list[[y]]
+		mat1[which(is.na(mat1))] = 0
+		raremax = minsamps[j]
+		rowsums2 = rowSums(mat1)
+		pos = which(rowsums2 > raremax)
+		mat2 = mat1[pos,]
+		Erare.evar = rarefy2(xx=mat2, sample1=raremax, divfun=get.evar)
+		Erare.evar2 = rep(NA,nrow(mat1))
+		Erare.evar2[pos] = Erare.evar #replace NAs with rarefied values, where sites had a large enough sample size
+		keep = keep.list[[y]]
+		evenness.evar.rarefied.add[keep,y] = Erare.evar2
+	}
+	evenness.evar.rarefied2[[j]] = evenness.evar.rarefied.add
+}
+
+hills0 = matrix(NA,nrow=length(sites),ncol=length(years))
+hills1 = matrix(NA,nrow=length(sites),ncol=length(years))
+hills2 = matrix(NA,nrow=length(sites),ncol=length(years))
+for (y in 1:length(years)){
+	hills = renyi(comm.mat.list[[y]],scales=c(0,1,2),hill=TRUE)
+	hills0[keep.list[[y]],y] = hills$`0`
+	hills1[keep.list[[y]],y] = hills$`1`
+	hills2[keep.list[[y]],y] = hills$`2`
+}
+
+# Summarize metrics per site*year
+div.summary = data.frame('Site'=NA,'Year'=NA,'Richness'=-999,'Richness.rarefied'=-999,'Richness.rarefied10'=-999,'Richness.rarefied100'=-999,'Richness.rarefied500'=-999,'Richness.rarefied1000'=-999,
+	'Evenness.evar'=-999,'Evenness.evar.rarefied'=-999,'Evenness.evar.rarefied10'=-999,'Evenness.evar.rarefied100'=-999,'Evenness.evar.rarefied500'=-999,'Evenness.evar.rarefied1000'=-999,
+	'Hill.0'=-999,'Hill.1'=-999,'Hill.2'=-999,stringsAsFactors=F)
+rx = 1
+for (s in 1:length(sites)){
+	print(s)
+	dat = butterfly_counts[which(butterfly_counts$Site==sites[s]),]
+	years = sort(as.numeric(unique(dat$Year)))
+	for (y in 1:length(years)){
+		# Get curve metrics
+		dat2 = dat[which(dat$Year==years[y]),]
+		pos1 = which(dat2$N.butterflies>0)
+		ab2 = dat2$N.butterflies[pos1]
+		ypos = which(1993:2018==years[y])
+		div.summary[rx,1] = sites[s]
+		div.summary[rx,2] = years[y]
+		div.summary[rx,3] = length(pos1) #richness
+		div.summary[rx,4] = richness.rarefied[s,ypos] #rarefied richness
+		div.summary[rx,5] = richness.rarefied2[[1]][s,ypos]
+		div.summary[rx,6] = richness.rarefied2[[2]][s,ypos]
+		div.summary[rx,7] = richness.rarefied2[[3]][s,ypos]
+		div.summary[rx,8] = richness.rarefied2[[4]][s,ypos]
+		div.summary[rx,9] = get.evar(ab2) #Evar evenness
+		div.summary[rx,10] = evenness.evar.rarefied[s,ypos] #rarefied Evar evenness
+		div.summary[rx,11] = evenness.evar.rarefied2[[1]][s,ypos]
+		div.summary[rx,12] = evenness.evar.rarefied2[[2]][s,ypos]
+		div.summary[rx,13] = evenness.evar.rarefied2[[3]][s,ypos]
+		div.summary[rx,14] = evenness.evar.rarefied2[[4]][s,ypos]
+		div.summary[rx,15] = hills0[s,ypos]
+		div.summary[rx,16] = hills1[s,ypos]
+		div.summary[rx,17] = hills2[s,ypos]
+		rx = rx + 1
+	}
+}
+write.table(div.summary,'site_diversity_summary_Jul_minsamps.txt',sep='\t',row.names=F,quote=F)
+hist(div.summary$Richness)
+x11()
+hist(div.summary$Richness.rarefied100)
+
+con = file('site_diversity_summary_Jul_minsamps.txt','r')
+add.lines = readLines(con)
+close(con)
+div.summary = data.frame(t(apply(array(add.lines[-1]),1,function(x){strsplit(x,'\t')[[1]]})),stringsAsFactors=F)
+colnames(div.summary) = strsplit(add.lines[1],'\t')[[1]]
+div.summary$Richness = as.numeric(div.summary$Richness)
+div.summary$Richness.rarefied = as.numeric(div.summary$Richness.rarefied)
+div.summary$Richness.rarefied10 = as.numeric(div.summary$Richness.rarefied10)
+div.summary$Richness.rarefied100 = as.numeric(div.summary$Richness.rarefied100)
+div.summary$Richness.rarefied500 = as.numeric(div.summary$Richness.rarefied500)
+div.summary$Richness.rarefied1000 = as.numeric(div.summary$Richness.rarefied1000)
+div.summary$Evenness.evar = as.numeric(div.summary$Evenness.evar)
+div.summary$Evenness.evar.rarefied = as.numeric(div.summary$Evenness.evar.rarefied)
+div.summary$Evenness.evar.rarefied10 = as.numeric(div.summary$Evenness.evar.rarefied10)
+div.summary$Evenness.evar.rarefied100 = as.numeric(div.summary$Evenness.evar.rarefied100)
+div.summary$Evenness.evar.rarefied500 = as.numeric(div.summary$Evenness.evar.rarefied500)
+div.summary$Evenness.evar.rarefied1000 = as.numeric(div.summary$Evenness.evar.rarefied1000)
+div.summary$Hill.0 = as.numeric(div.summary$Hill.0)
+div.summary$Hill.1 = as.numeric(div.summary$Hill.1)
+div.summary$Hill.2 = as.numeric(div.summary$Hill.2)
+
+# Trends
+source('C:/Users/mcros/Desktop/Postdoc UGA/LTER_insect_diversity/code/AR_reml.R')
+sites = unique(div.summary$Site)
+years = 1993:2018
+trend.summary = data.frame('Site'=NA,'Richness.trend'=-999,'Richness.rarefied.trend'=-999,'Richness.rarefied10.trend'=-999,'Richness.rarefied100.trend'=-999,'Richness.rarefied500.trend'=-999,'Richness.rarefied1000.trend'=-999,
+	'Evenness.evar.trend'=-999,'Evenness.evar.rarefied.trend'=-999,'Evenness.evar.rarefied10.trend'=-999,'Evenness.evar.rarefied100.trend'=-999,'Evenness.evar.rarefied500.trend'=-999,'Evenness.evar.rarefied1000.trend'=-999,
+	'Hill.0.trend'=-999,'Hill.1.trend'=-999,'Hill.2.trend'=-999)
+variables = c('Richness','Richness.rarefied','Richness.rarefied10','Richness.rarefied100','Richness.rarefied500','Richness.rarefied1000',
+	'Evenness.evar','Evenness.evar.rarefied','Evenness.evar.rarefied10','Evenness.evar.rarefied100','Evenness.evar.rarefied500','Evenness.evar.rarefied1000',
+	'Hill.0','Hill.1','Hill.2')
+thresh = 5
+lost.sites = data.frame()
+for (f in 1:length(sites)){
+	print(f)
+	dat1 = div.summary[which(div.summary$Site==sites[f]),]
+	trend.summary[f,1] = sites[f]
+	for (v in 1:length(variables)){
+		vdat = dat1[,which(colnames(dat1)==variables[v])]
+		if (length(which(!is.na(vdat)))>=thresh){ #remove time series shorter than 5 years
+			if (length(unique(vdat))==1){
+				trend.summary[f,v+1] = 0 #no change in this metric
+			} else {
+				y.match = match(years,dat1$Year)
+				X = y.match
+				X[which(!is.na(X))] = vdat[X[which(!is.na(X))]] #fill-in values in the expanded time series
+				Z = (X – mean(X, na.rm=T))/sd(X, na.rm=T) # z-transform
+				t.scale = years - years[1]
+				arr.Z = AR_reml(Z ~ t.scale) #Z-transformed time trends
+				trend.summary[f,v+1] = arr.Z$coef[2] #slope of trend line
+				#Plot time series
+	#			png(paste0('./plots/diversity_lineplots/JunAug/',variables[v],'_',f,'.png'))
+	#			plot(t.scale,X,type='l',main=sites[f],xlab='Scaled time',ylab=variables[v],lwd=2)
+	#			legend('topleft',legend=c(paste0('slope = ',round(arr.Z$coef[2],2)),paste0('length = ',length(which(!is.na(Z)))),paste0('autocor = ',round(arr.Z$b,2)),paste0('logLik = ',round(arr.Z$logLik,2))),ncol=1,bty='n',adj=0)
+	#			dev.off()
+			}
+		} else {
+			lost.sites = data.frame(rbind(lost.sites,data.frame('Variable'=variables[v],'Site'=sites[f],stringsAsFactors=F)),stringsAsFactors=F)
+			trend.summary[f,v+1] = NA
+		}
+	}
+}
+write.table(trend.summary,'./diversity_trends_Jul_minsamps.txt',sep='\t',row.names=F)
+
+trend.summary = read.table('./diversity_trends_Jul_minsamps.txt',sep='\t',as.is=T,check.names=F,header=T)
+
+png('./plots/rarefaction richness trends Jul.png',res=300,height=480*4,width=480*7)
+par(mfrow=c(2,3),oma=c(0,0,0,0),mar=c(5,5,2,0))
+hist(trend.summary$Richness.trend,main='raw',breaks=seq(-0.6,0.6,0.05),xaxt='n',yaxt='n',xlab='Richness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Richness.rarefied.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Richness.rarefied10.trend,main='minsamp=10',breaks=seq(-0.7,0.6,0.05),xaxt='n',yaxt='n',xlab='Rarefied richness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Richness.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Richness.rarefied100.trend,main='minsamp=100',breaks=seq(-0.7,0.6,0.05),xaxt='n',yaxt='n',xlab='Rarefied richness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Richness.rarefied100.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Richness.rarefied500.trend,main='minsamp=500',breaks=seq(-0.7,0.6,0.05),xaxt='n',yaxt='n',xlab='Rarefied richness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Richness.rarefied500.trend)))),bty='n',cex=1.5)
+hist(trend.summary$Richness.rarefied1000.trend,main='minsamp=1000',breaks=seq(-0.7,0.6,0.05),xaxt='n',yaxt='n',xlab='Rarefied richness trend (sd/yr)',ylab='No. sites',cex.lab=2,col='grey50'); axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5); abline(v=0,lwd=3,col='pink'); legend('topright',legend=paste0('N=',length(which(!is.na(trend.summary$Richness.rarefied1000.trend)))),bty='n',cex=1.5)
+dev.off()
+
+
+####################################################################################
 # Create shapefile with diversity trends
 library(classInt)
 library(sf)
@@ -754,15 +1124,39 @@ library(ggplot2)
 proj1 = '+proj=aea +lat_1=20 +lat_2=60 +lat_0=40 +lon_0=-96 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs +ellps=GRS80 +towgs84=0,0,0'
 eco1 = spTransform(readOGR(dsn='./shapefiles/na_cec_eco_l1/NA_CEC_Eco_Level1.shp',layer='NA_CEC_Eco_Level1',verbose=F,stringsAsFactors=F),CRS(proj1)) #ecoregion shapefiles - used for mapping later
 eco_sf = as(eco1, 'sf')
-
 trend.summary = read.table('./diversity_trends_JunAug.txt',sep='\t',as.is=T,check.names=F,header=T)
 proj1 = '+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs'
 butterfly_circles = spTransform(readOGR(dsn='./shapefiles/butterfly_sites_50km_NoMerge.shp',layer='butterfly_sites_50km_NoMerge',verbose=F,stringsAsFactors=F),CRS(proj1)) #shapefile with grid
-match1 = match(butterfly_circles@data$Site,trend.summary$Site)
-trend.summary$Lat = butterfly_circles@coords[match1[which(!is.na(match1))],2]
-trend.summary$Lon = butterfly_circles@coords[match1[which(!is.na(match1))],1]
+merge1 = merge(butterfly_circles,trend.summary,by='Site',sort=F,all.x=F)
+writeOGR(merge1,dsn='./shapefiles/butterfly_trends_JunAug.shp',layer='butterfly_trends_JunAug',driver='ESRI Shapefile',overwrite=T)
 
-dat = spTransform(SpatialPointsDataFrame(coords=cbind(trend.summary$Lon,trend.summary$Lat),data=trend.summary,proj4string=CRS('+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs')),CRS(proj1))
-writeOGR(dat,dsn='./shapefiles/butterfly_trends_JunAug.shp',layer='butterfly_trends_JunAug',driver='ESRI Shapefile',overwrite=T)
+# Minsamp = 100
+proj1 = '+proj=aea +lat_1=20 +lat_2=60 +lat_0=40 +lon_0=-96 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs +ellps=GRS80 +towgs84=0,0,0'
+eco1 = spTransform(readOGR(dsn='./shapefiles/na_cec_eco_l1/NA_CEC_Eco_Level1.shp',layer='NA_CEC_Eco_Level1',verbose=F,stringsAsFactors=F),CRS(proj1)) #ecoregion shapefiles - used for mapping later
+eco_sf = as(eco1, 'sf')
+trend.summary = read.table('./diversity_trends_JunAug_minsamps.txt',sep='\t',as.is=T,check.names=F,header=T)
+trend.summary = trend.summary[,c(1,5,11,15)]
+proj1 = '+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs'
+butterfly_circles = spTransform(readOGR(dsn='./shapefiles/butterfly_sites_50km_NoMerge.shp',layer='butterfly_sites_50km_NoMerge',verbose=F,stringsAsFactors=F),CRS(proj1)) #shapefile with grid
+merge1 = merge(butterfly_circles,trend.summary,by='Site',sort=F,all.x=F)
+writeOGR(merge1,dsn='./shapefiles/butterfly_trends_JunAug_minsamp100.shp',layer='butterfly_trends_JunAug_minsamp100',driver='ESRI Shapefile',overwrite=T)
 
+merge1@data[1,]
+butterfly_circles@data[which(butterfly_circles@data$Site==merge1@data$Site[1]),]
 
+data1 = read.table('./data/butterfly_traits_envars_trends_50km_NoMergeJunAug_m5_trim_2traits.txt',sep='\t',as.is=T,check.names=F,header=T); str(data1)
+merge2 = merge(data1,merge1,by='grid_id',all.x=T,sort=F)
+lm1 = lm(Richness.rarefied100.trend ~ Abundance.trend,data=merge2)
+summary(lm1)
+lm2 = lm(Evenness.evar.rarefied100.trend ~ Abundance.trend,data=merge2)
+summary(lm2)
+
+library(scales)
+plot(merge2$Richness.rarefied100.trend,merge2$Abundance.trend,col=alpha('black',0.2),xlab='Rarefied richness trend (minsamp=10)',ylab='Species*site abundance trend',pch=16,cex.lab=1.5,cex.axis=1.2)
+plot(merge2$Evenness.evar.rarefied100.trend,merge2$Abundance.trend,col=alpha('black',0.2),xlab='Rarefied evenness trend (minsamp=10)',ylab='Species*site abundance trend',pch=16,cex.lab=1.5,cex.axis=1.2)
+
+par(mfrow=c(1,2))
+plot(merge2$Abundance.trend,merge2$Richness.rarefied100.trend,col=alpha('black',0.2),ylab='Rarefied richness trend (minsamp=100)',xlab='Species*site abundance trend',pch=16,cex.lab=1.5,cex.axis=1.2)
+abline(lm1,lwd=3,col='pink')
+plot(merge2$Abundance.trend,merge2$Evenness.evar.rarefied100.trend,col=alpha('black',0.2),ylab='Rarefied evenness trend (minsamp=100)',xlab='Species*site abundance trend',pch=16,cex.lab=1.5,cex.axis=1.2)
+abline(lm2,lwd=3,col='pink')
