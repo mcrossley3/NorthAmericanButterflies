@@ -1,0 +1,58 @@
+
+
+library(scales)
+
+data1 = read.table('./data/butterfly_traits_envars_trends_50km_NoMergeJunAug_m5_trim_6traits.txt',sep='\t',as.is=T,check.names=F,header=T); str(data1)
+data1.left = read.table('./data/butterfly_traits_envars_trends_50km_NoMergeJunAug_m5_trim_6traits_leftcensored.txt',sep='\t',as.is=T,check.names=F,header=T); str(data1.left)
+data1.right = read.table('./data/butterfly_traits_envars_trends_50km_NoMergeJunAug_m5_trim_6traits_rightcensored.txt',sep='\t',as.is=T,check.names=F,header=T); str(data1.right)
+
+data1$Species.grid_id = paste(data1$Species,data1$grid_id,sep='_')
+data1.left$Species.grid_id = paste(data1.left$Species,data1.left$grid_id,sep='_')
+data1.right$Species.grid_id = paste(data1.right$Species,data1.right$grid_id,sep='_')
+
+merge1 = merge(data1,data1.left,by='Species.grid_id')
+merge2 = merge(merge1,data1.right,by='Species.grid_id')
+
+pp1 = length(which(merge2$Abundance.trend>0 & merge2$Abundance.trend.leftcensored>0))
+nn1 = length(which(merge2$Abundance.trend<0 & merge2$Abundance.trend.leftcensored<0))
+pn1 = length(which(merge2$Abundance.trend>0 & merge2$Abundance.trend.leftcensored<0))
+np1 = length(which(merge2$Abundance.trend<0 & merge2$Abundance.trend.leftcensored>0))
+pp1 = paste0(round(100*pp1 / nrow(merge2),0),'%')
+nn1 = paste0(round(100*nn1 / nrow(merge2),0),'%')
+pn1 = paste0(round(100*pn1 / nrow(merge2),0),'%')
+np1 = paste0(round(100*np1 / nrow(merge2),0),'%')
+
+pp2 = length(which(merge2$Abundance.trend>0 & merge2$Abundance.trend.rightcensored>0))
+nn2 = length(which(merge2$Abundance.trend<0 & merge2$Abundance.trend.rightcensored<0))
+pn2 = length(which(merge2$Abundance.trend>0 & merge2$Abundance.trend.rightcensored<0))
+np2 = length(which(merge2$Abundance.trend<0 & merge2$Abundance.trend.rightcensored>0))
+pp2 = paste0(round(100*pp2 / nrow(merge2),0),'%')
+nn2 = paste0(round(100*nn2 / nrow(merge2),0),'%')
+pn2 = paste0(round(100*pn2 / nrow(merge2),0),'%')
+np2 = paste0(round(100*np2 / nrow(merge2),0),'%')
+
+pp3 = length(which(merge2$Abundance.trend.leftcensored>0 & merge2$Abundance.trend.rightcensored>0))
+nn3 = length(which(merge2$Abundance.trend.leftcensored<0 & merge2$Abundance.trend.rightcensored<0))
+pn3 = length(which(merge2$Abundance.trend.leftcensored>0 & merge2$Abundance.trend.rightcensored<0))
+np3 = length(which(merge2$Abundance.trend.leftcensored<0 & merge2$Abundance.trend.rightcensored>0))
+pp3 = paste0(round(100*pp3 / nrow(merge2),0),'%')
+nn3 = paste0(round(100*nn3 / nrow(merge2),0),'%')
+pn3 = paste0(round(100*pn3 / nrow(merge2),0),'%')
+np3 = paste0(round(100*np3 / nrow(merge2),0),'%')
+
+png('./plots/censoring sensitivity.png',res=300,width=480*9,height=480*3)
+par(mfrow=c(1,3),oma=c(0,0,0,0),mar=c(5,5,1,1),cex.lab=2)
+plot(merge2$Abundance.trend,merge2$Abundance.trend.leftcensored,xlab='Abundance trend uncensored',ylab='Abundance trend left-censored',col=alpha('black',0.2),pch=16,xaxt='n',yaxt='n',bty='n')
+abline(h=0); abline(v=0)
+axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5)
+legend('topright',legend=pp1,bty='n',cex=2); legend('topleft',legend=np1,bty='n',cex=2); legend('bottomleft',legend=nn1,bty='n',cex=2); legend('bottomright',legend=pn1,bty='n',cex=2)
+plot(merge2$Abundance.trend,merge2$Abundance.trend.rightcensored,xlab='Abundance trend uncensored',ylab='Abundance trend right-censored',col=alpha('black',0.2),pch=16,xaxt='n',yaxt='n',bty='n')
+abline(h=0); abline(v=0)
+axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5)
+legend('topright',legend=pp2,bty='n',cex=2); legend('topleft',legend=np2,bty='n',cex=2); legend('bottomleft',legend=nn2,bty='n',cex=2); legend('bottomright',legend=pn2,bty='n',cex=2)
+plot(merge2$Abundance.trend.leftcensored,merge2$Abundance.trend.rightcensored,xlab='Abundance trend left-censored',ylab='Abundance trend right-censored',col=alpha('black',0.2),pch=16,xaxt='n',yaxt='n',bty='n')
+abline(h=0); abline(v=0)
+axis(1,lwd=3,cex.axis=1.5); axis(2,lwd=3,cex.axis=1.5)
+legend('topright',legend=pp3,bty='n',cex=2); legend('topleft',legend=np3,bty='n',cex=2); legend('bottomleft',legend=nn3,bty='n',cex=2); legend('bottomright',legend=pn3,bty='n',cex=2)
+dev.off()
+
