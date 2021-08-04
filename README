@@ -1,7 +1,4 @@
 Data and code available in this repository are associated with:
-Crossley MS, ###. 2020. ###. ### ##:##-##.
+Crossley, M. S., O. M. Smith, L. L. Berry, R. Phillips-Cosio, J. Glassberg, K. M. Holman, J. G. Holmquest, A. R. Meier, S. A. Varriano, M. R. McClung, M. D. Moran, and W. E. Snyder. 2021. Recent climate change is creating hotspots of butterfly increase and decline across North America. Global Change Biology (In Press).
 
-All files necessary to replicate analyses are inlcuded. However, raw data (used in the curate.butterflies.R pipeline) must be purchased from the North American Butterfly Association:
-https://www.naba.org/
-
-Questions and comments can be sent to Dr. Michael Crossley at mcrossley3@gmail.com
+All files necessary to replicate analyses are inlcuded. Raw butterfly count data are available from the North American Butterfly Association (https://www.naba.org/).
